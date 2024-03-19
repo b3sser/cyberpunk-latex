@@ -20,6 +20,8 @@ As usual with LaTeX, the text you put in the boxes will not be automatically siz
 ## Compilation & Dependencies
 This Template is designed to be compiled with **XeLaTeX**. XeTeX may also work but is not explicitely tested.
 
+If you are encountering issues, please make sure you have ```xetex-pstricks``` installed.
+
 ## Credits
 This package was created based on the standard Talsorian Games PDF character sheet template and uses it as background image
 
