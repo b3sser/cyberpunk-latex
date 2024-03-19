@@ -9,6 +9,7 @@ LaTeX template for typesetting Cyberpunk Character Sheets
 
 #### Currently in development:
 - automatic calculation of Stat & Base
+- Mooks Sheets
 
 ## Usage
 In the ```characters``` folder, you will find an empty sheet, which you may copy and rename for each character you create. There you will also find an example character, illustrating the usage.

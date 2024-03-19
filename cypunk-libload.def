@@ -1,0 +1,17 @@
+% % Low-level modules
+% \RequirePackage {lib/compat}        % compatibility definitions
+% \RequirePackage {lib/dndutility}    % utility functions
+% \RequirePackage {lib/dndcolors}     % color definitions
+% \RequirePackage {lib/dndfonts}      % font definitions
+% \RequirePackage {lib/dndstrings}    % Load document strings
+
+
+% % Main modules
+% \RequirePackage {lib/dndcomment}    % inline comment boxes
+% \RequirePackage {lib/dndheader}     % fancy headers and footers
+% \RequirePackage {lib/dndmonster}    % stat blocks
+% \RequirePackage {lib/dndreadaloud}  % read-aloud text
+% \RequirePackage {lib/dndsections}   % section styling and special section headers
+% \RequirePackage {lib/dndsidebar}    % sidebars
+% \RequirePackage {lib/dndtable}      % tables
+% \RequirePackage {lib/dndtoc}        % table of contents styling

@@ -1,0 +1,44 @@
+\ExplSyntaxOn
+
+\ProvidesExplPackage{dnd}{2020/04/21}{0.8.0}{ Template for DnD 5e material }
+
+% Load Required Packages
+\input {cypunk-requi.def}
+
+% Set page geometry.
+\geometry{
+    top         = 0cm,
+    bottom      = 0cm,
+    left        = -0.6cm,
+    right       = 0cm,
+    footskip    = 8mm, % Bottom of text area to bottom of footer text
+    columnsep   = 8mm, % Space between columns
+}
+
+% Set paragraph and line spacing
+\setlength {\parindent} {1em}
+%\setlength {\RaggedRightRightskip} {0pt plus 1em}
+%\setlength {\RaggedRightParindent} {\parindent}
+
+% Restrict hyphenation
+\tolerance        = 1
+\emergencystretch = \maxdimen
+\hyphenpenalty    = 10000
+\hbadness         = 10000
+
+%\RaggedRight
+
+% Set Font
+%\newfontfamily\entryfont{Kalam}[Path=template/fonts/,Extension=.ttf,UprightFont=Kalam-Regular,BoldFont=Kalam-Bold]
+
+% Customize itemize environment.
+\setlist{leftmargin=1em}
+\setitemize{noitemsep,topsep=0.5ex,label=\footnotesize{$\bullet$}}
+
+% Load other modules of this package after all dependencies to avoid load order conflicts
+\input{cypunk-libload.def}
+
+\input{template/cypunk-character-commands.tex}
+
+% Rendering Commands
+\newcommand{\renderstatsheet}{\input{template/1-stat-sheet.tex}}

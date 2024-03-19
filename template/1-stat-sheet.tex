@@ -1,0 +1,22 @@
+\begin{document}
+
+%\makebox[\paperwidth][s]{
+%\psset{xunit=0.75pt,yunit=0.75pt,runit=0.75pt}
+\begin{pspicture}(5,5)
+
+    % Set background
+    \begin{tikzpicture}[remember picture,overlay]
+        \node[inner sep=0pt] at (current page.center)
+        {\includegraphics[width=\paperwidth,height=\paperheight]{img/1-stats.jpg}};
+    \end{tikzpicture}
+
+    \rput(0,0){\Large X}
+    \rput(5,0){\Large X}
+    \rput(0,5){\Large X}
+    \rput(5,5){\Large X}
+
+%    \input{template/1-stat-sheet/1-left.tex}
+
+\end{pspicture}
+%}
+\end{document}
