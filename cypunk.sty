@@ -17,8 +17,7 @@
 
 % Set paragraph and line spacing
 \setlength {\parindent} {1em}
-%\setlength {\RaggedRightRightskip} {0pt plus 1em}
-%\setlength {\RaggedRightParindent} {\parindent}
+\linespread {0.8}
 
 % Restrict hyphenation
 \tolerance        = 1
@@ -29,7 +28,15 @@
 %\RaggedRight
 
 % Set Font
-%\newfontfamily\entryfont{Kalam}[Path=template/fonts/,Extension=.ttf,UprightFont=Kalam-Regular,BoldFont=Kalam-Bold]
+\setmainfont[
+    Path=lib/fonts/exo/,
+    Ligatures=TeX,
+    UprightFont = *-Regular,
+    ItalicFont = *-Italic,
+    BoldFont = *-Bold,
+    BoldItalicFont = *-BoldItalic
+]{Exo}
+
 
 % Customize itemize environment.
 \setlist{leftmargin=1em}
@@ -38,7 +45,7 @@
 % Load other modules of this package after all dependencies to avoid load order conflicts
 \input{lib/cypunk-libload.def}
 
-\input{template/cypunk-character-commands.tex}
+\input{template/character-commands.tex}
 
 % Rendering Commands
 \newcommand{\renderstatsheet}{\input{template/1-stat-sheet.tex}}

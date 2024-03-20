@@ -24,6 +24,6 @@
 
 \RequirePackage {geometry}
 
-%\RequirePackage {fontspec}
+\RequirePackage {fontspec}
 \RequirePackage{ifthen}
 \RequirePackage{pstricks}
