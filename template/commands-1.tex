@@ -103,7 +103,7 @@
 \makeatother
 
 
-% % % SKILLS % % %
+% % % SKILLS - 1st Column  % % %
 \newcommand{\ConcentrationL}{2}
 \newcommand{\ConcentrationS}{\WILLValue}
 \newcommand{\ConcentrationB}{\fpeval{\ConcentrationL + \ConcentrationS}}
@@ -353,3 +353,128 @@
     \ifstrempty{#2}{}{\renewcommand{\GambleS}{#2}}
     \ifstrempty{#3}{\renewcommand{\GambleB}{\fpeval{\GambleL + \GambleS}}}{\renewcommand{\GambleB}{#3}}
 }
+
+
+% % % SKILLS - 2nd Column  % % %
+\newcommand{\StreetSlangL}{2}
+\newcommand{\StreetSlangS}{\INTValue}
+\newcommand{\StreetSlangB}{\fpeval{\StreetSlangL + \StreetSlangS}}
+
+\newcommand{\StreetSlang}[3]{
+    \ifstrempty{#1}{}{\renewcommand{\StreetSlangL}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\StreetSlangS}{#2}}
+    \ifstrempty{#3}{\renewcommand{\StreetSlangB}{\fpeval{\StreetSlangL + \StreetSlangS}}}{\renewcommand{\StreetSlangB}{#3}}
+}
+
+\newcommand{\LanguageAName}{}
+\newcommand{\LanguageAL}{4}
+\newcommand{\LanguageAS}{\INTValue}
+\newcommand{\LanguageAB}{\fpeval{\LanguageAL + \LanguageAS}}
+
+\newcommand{\LanguageA}[4]{
+    \ifstrempty{#1}{}{\renewcommand{\LanguageAName}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\LanguageAL}{#2}}
+    \ifstrempty{#3}{}{\renewcommand{\LanguageAS}{#3}}
+    \ifstrempty{#4}{\renewcommand{\LanguageAB}{\fpeval{\LanguageAL + \LanguageAS}}}{\renewcommand{\LanguageAB}{#4}}
+}
+
+\newcommand{\LanguageBName}{}
+\newcommand{\LanguageBL}{}
+\newcommand{\LanguageBS}{\INTValue}
+\newcommand{\LanguageBB}{}
+
+\newcommand{\LanguageB}[4]{
+    \ifstrempty{#1}{}{\renewcommand{\LanguageBName}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\LanguageBL}{#2}}
+    \ifstrempty{#3}{}{\renewcommand{\LanguageBS}{#3}}
+    \ifstrempty{#4}{\renewcommand{\LanguageBB}{\fpeval{\LanguageBL + \LanguageBS}}}{\renewcommand{\LanguageBB}{#4}}
+}
+
+\newcommand{\LibrarySearchL}{2}
+\newcommand{\LibrarySearchS}{\INTValue}
+\newcommand{\LibrarySearchB}{\fpeval{\LibrarySearchL + \LibrarySearchS}}
+
+\newcommand{\LibrarySearch}[3]{
+    \ifstrempty{#1}{}{\renewcommand{\LibrarySearchL}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\LibrarySearchS}{#2}}
+    \ifstrempty{#3}{\renewcommand{\LibrarySearchB}{\fpeval{\LibrarySearchL + \LibrarySearchS}}}{\renewcommand{\LibrarySearchB}{#3}}
+}
+
+\newcommand{\YourHomeL}{2}
+\newcommand{\YourHomeS}{\INTValue}
+\newcommand{\YourHomeB}{\fpeval{\YourHomeL + \YourHomeS}}
+
+\newcommand{\YourHome}[3]{
+    \ifstrempty{#1}{}{\renewcommand{\YourHomeL}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\YourHomeS}{#2}}
+    \ifstrempty{#3}{\renewcommand{\YourHomeB}{\fpeval{\YourHomeL + \YourHomeS}}}{\renewcommand{\YourHomeB}{#3}}
+}
+
+\newcommand{\LocalAName}{}
+\newcommand{\LocalAL}{}
+\newcommand{\LocalAS}{\INTValue}
+\newcommand{\LocalAB}{}
+
+\newcommand{\LocalA}[4]{
+    \ifstrempty{#1}{}{\renewcommand{\LocalAName}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\LocalAL}{#2}}
+    \ifstrempty{#3}{}{\renewcommand{\LocalAS}{#3}}
+    \ifstrempty{#4}{\renewcommand{\LocalAB}{\fpeval{\LocalAL + \LocalAS}}}{\renewcommand{\LocalAB}{#4}}
+}
+
+\newcommand{\LocalBName}{}
+\newcommand{\LocalBL}{}
+\newcommand{\LocalBS}{\INTValue}
+\newcommand{\LocalBB}{}
+
+\newcommand{\LocalB}[4]{
+    \ifstrempty{#1}{}{\renewcommand{\LocalBName}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\LocalBL}{#2}}
+    \ifstrempty{#3}{}{\renewcommand{\LocalBS}{#3}}
+    \ifstrempty{#4}{\renewcommand{\LocalBB}{\fpeval{\LocalBL + \LocalBS}}}{\renewcommand{\LocalBB}{#4}}
+}
+
+\newcommand{\ScienceAName}{}
+\newcommand{\ScienceAL}{}
+\newcommand{\ScienceAS}{\INTValue}
+\newcommand{\ScienceAB}{}
+
+\newcommand{\ScienceA}[4]{
+    \ifstrempty{#1}{}{\renewcommand{\ScienceAName}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\ScienceAL}{#2}}
+    \ifstrempty{#3}{}{\renewcommand{\ScienceAS}{#3}}
+    \ifstrempty{#4}{\renewcommand{\ScienceAB}{\fpeval{\ScienceAL + \ScienceAS}}}{\renewcommand{\ScienceAB}{#4}}
+}
+
+\newcommand{\ScienceBName}{}
+\newcommand{\ScienceBL}{}
+\newcommand{\ScienceBS}{\INTValue}
+\newcommand{\ScienceBB}{}
+
+\newcommand{\ScienceB}[4]{
+    \ifstrempty{#1}{}{\renewcommand{\ScienceBName}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\ScienceBL}{#2}}
+    \ifstrempty{#3}{}{\renewcommand{\ScienceBS}{#3}}
+    \ifstrempty{#4}{\renewcommand{\ScienceBB}{\fpeval{\ScienceBL + \ScienceBS}}}{\renewcommand{\ScienceBB}{#4}}
+}
+
+\newcommand{\TacticsL}{0}
+\newcommand{\TacticsS}{\INTValue}
+\newcommand{\TacticsB}{\fpeval{\TacticsL + \TacticsS}}
+
+\newcommand{\Tactics}[3]{
+    \ifstrempty{#1}{}{\renewcommand{\TacticsL}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\TacticsS}{#2}}
+    \ifstrempty{#3}{\renewcommand{\TacticsB}{\fpeval{\TacticsL + \TacticsS}}}{\renewcommand{\TacticsB}{#3}}
+}
+
+\newcommand{\WildernessL}{0}
+\newcommand{\WildernessS}{\INTValue}
+\newcommand{\WildernessB}{\fpeval{\WildernessL + \WildernessS}}
+
+\newcommand{\Wilderness}[3]{
+    \ifstrempty{#1}{}{\renewcommand{\WildernessL}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\WildernessS}{#2}}
+    \ifstrempty{#3}{\renewcommand{\WildernessB}{\fpeval{\WildernessL + \WildernessS}}}{\renewcommand{\WildernessB}{#3}}
+}
+
