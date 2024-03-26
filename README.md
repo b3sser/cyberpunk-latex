@@ -8,15 +8,30 @@ LaTeX template for typesetting Cyberpunk Character Sheets
 - Example character to illustrate usage
 
 #### Currently in development:
-- automatic calculation of Stat & Base
+- Automatic calculation of Stat & Base (for Skills) and more auto-calculated values
 - Mooks Sheets
 
 ## Usage
-In the ```characters``` folder, you will find an empty sheet, which you may copy and rename for each character you create. There you will also find an example character, illustrating the usage.
+#### TL;DR
+1. Copy ```empty.tex```
+2. Fill commands with your values and text
+3. Compile with XeTeX
 
-Each stat has a custom command, listed and sorted in the empty sheet. The names of the commands should tell you, what Stat goes in there. If there are options, multiple arguments or other things special to one command, they will be explained in a comment right above the command.
+Look at ```example-character.tex``` for guidance
 
-As usual with LaTeX, the text you put in the boxes will not be automatically sized, so please work with commands like ```\small``` where necessary.
+#### More Tips
+- Each stat has a custom command, listed and sorted in the empty sheet. The names of the commands should tell you, what Stat goes in there. If there are options, multiple arguments or other things special to one command, they will be explained in a comment right above the command.
+
+- Multiline-fields have automatic line-wrap, for others use ```\\``` where needed
+- All fields have a default font size. You can change for selected fields by adding a size command before your actual input.
+    - Sizes: ```\Huge```, ```\huge```, ```\LARGE```, ```\Large```, ```\large```, ```\normalsize```, ```\small```, ```\footnotsize```, ```\scriptsize```, ```\tiny```
+
+<!--
+#### Auto-calculation of stats
+If you want auto-calculation, make sure to leave the fields supporting this feature blank or removing their commands completely. In ```empty-auto.tex```, these are already removed.
+
+When working with auto-calculation, you can overwrite selected values with your own input (e.g. when an item you have changes that value), simply by using the command like you would in a sheet without auto-calculation. The calculated value is only set as the default and can be overwritten this way. If you do not know the name of the needed command, take a look at ```empty.tex```
+-->
 
 ## Compilation & Dependencies
 This Template is designed to be compiled with **XeLaTeX**. XeTeX may also work but is not explicitely tested.
