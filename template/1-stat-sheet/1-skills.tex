@@ -42,15 +42,15 @@
         \begin{tblr}{Q[l,62.5]Q[c,15pt]Q[c,16pt]Q[c,17.5pt]}
             & \StreetSlangL & \StreetSlangS & \StreetSlangB \\
             \LanguageAName & \LanguageAL & \LanguageAS & \LanguageAB \\
-            \LanguageBName & \LanguageBL & \LanguageBS & \LanguageBB \\
+            \SetRow{ht=10.4pt}\LanguageBName  & \LanguageBL & \LanguageBS & \LanguageBB \\
             & \LibrarySearchL & \LibrarySearchS & \LibrarySearchB \\
             \\
             & \YourHomeL & \YourHomeS & \YourHomeB \\
-            \LocalAName & \LocalAL & \LocalAS & \LocalAB \\
-            \LocalBName & \LocalBL & \LocalBS & \LocalBB \\
+            \SetRow{ht=10.4pt}\LocalAName  & \LocalAL & \LocalAS & \LocalAB \\
+            \SetRow{ht=10.4pt}\LocalBName  & \LocalBL & \LocalBS & \LocalBB \\
             \\
-            \ScienceAName & \ScienceAL & \ScienceAS & \ScienceAB \\
-            \ScienceBName & \ScienceBL & \ScienceBS & \ScienceBB \\
+            \SetRow{ht=10.4pt} \ScienceAName  & \ScienceAL & \ScienceAS & \ScienceAB \\
+            \SetRow{ht=10.4pt} \ScienceBName  & \ScienceBL & \ScienceBS & \ScienceBB \\
             & \TacticsL & \TacticsS & \TacticsB \\
             & \WildernessL & \WildernessS & \WildernessB \\
             \\
@@ -61,12 +61,24 @@
             \\
             & \ActingL & \ActingS & \ActingB \\
             \\
-            \InstrumentAName & \InstrumentAL & \InstrumentAS & \InstrumentAB \\
-            \InstrumentBName & \InstrumentBL & \InstrumentBS & \InstrumentBB \\
+            \SetRow{ht=10.5pt} \InstrumentAName & \InstrumentAL & \InstrumentAS & \InstrumentAB \\
+            \SetRow{ht=10.5pt} \InstrumentBName & \InstrumentBL & \InstrumentBS & \InstrumentBB \\
             \\
             & \ArcheryL & \ArcheryS & \ArcheryB \\
             & \AutofireL & \AutofireS & \AutofireB \\
             & \HandgunL & \HandgunS & \HandgunB \\
+        \end{tblr}
+    }
+}
+
+
+
+% % %  2nd COLUMN  % % %
+\rput[lt](456,536.8){
+    \parbox{135.5pt}{
+        \justify
+        \begin{tblr}{Q[c,15pt]Q[c,16pt]Q[c,17.5pt]}
+            \StreetSlangL & \StreetSlangS & \StreetSlangB \\
         \end{tblr}
     }
 }
