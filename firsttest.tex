@@ -72,7 +72,7 @@
 % % %  SKILLS  % % %
 % Use like this:
 % \SkillName{Lvl}{Stat}{Base}
-% Leave Lvl blank to set to minimum (0 normally, 2 for bold)
+% Leave Lvl blank to set to minimum (0 normally, 2 for basic skills (bold))
 % Leave Stat blank to automatically copy from Stats
 % Leave Base blank to set as Lvl+Stat
 
@@ -109,29 +109,54 @@
 \Education{}{}{}
 \Gamble{}{}{}
 
+
 %  Education Skills  %
-% For Languages, Local Expert & Science
-% Fill the 1st field with the name
+% For Languages, Local Expert, Science:
+% fill the 1st field with the name
 % and the other three as usual
+% Leave blank (or delete command) if you know none
 % Example: \LanguageA{Hawaiian}{4}{8}{12}
 
 %  Languages  %
 \StreetSlang{}{}{}
-\LanguageA{}{}{}{}  % Should be filled with the language you get from cultural background
-\LanguageB{}{}{}{}
+\LanguageA{Hawaiian}{}{}{}  % Should be filled with the language you get from cultural origin
+\LanguageB{kek}{}{}{}
 
 \LibrarySearch{}{}{}
 
 %  Local Expert  %
 \YourHome{}{}{}
-\LocalA{}{}{}{}
-\LocalB{}{}{}{}
+\LocalA{kek}{}{}{}
+\LocalB{kek2}{}{}{}
 
 %  Science  %
-\ScienceA{}{}{}{}
-\ScienceB{}{}{}{}
+\ScienceA{kek}{}{}{}
+\ScienceB{kek2}{}{}{}
 
 \Tactics{}{}{}
 \Wilderness{}{}{}
+
+
+%  Fighting Skills  %
+\Brawling{}{}{}
+\Evasion{}{}{}
+\MartialArts{}{}{}
+\MeleeWeapon{}{}{}
+
+
+%  Performance Skills  %
+\Acting{}{}{}
+%  Play Instrument  %
+% Fill the 1st field with the instrument name
+% and the other three as usual
+% Leave blank (or delete command) if you play none
+\InstrumentA{kek}{}{}{}
+\InstrumentB{kek2}{}{}{}
+
+
+%  Ranged Weapon Skills  %
+\Archery{}{}{}
+\Autofire{}{}{}
+\Handgun{}{}{}
 
 \renderstatsheet

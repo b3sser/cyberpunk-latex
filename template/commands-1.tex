@@ -380,14 +380,15 @@
 
 \newcommand{\LanguageBName}{}
 \newcommand{\LanguageBL}{}
-\newcommand{\LanguageBS}{\INTValue}
+\newcommand{\LanguageBS}{}
 \newcommand{\LanguageBB}{}
 
 \newcommand{\LanguageB}[4]{
-    \ifstrempty{#1}{}{\renewcommand{\LanguageBName}{#1}}
-    \ifstrempty{#2}{}{\renewcommand{\LanguageBL}{#2}}
-    \ifstrempty{#3}{}{\renewcommand{\LanguageBS}{#3}}
+    \ifstrempty{#1}{}{\renewcommand{\LanguageBName}{#1}
     \ifstrempty{#4}{\renewcommand{\LanguageBB}{\fpeval{\LanguageBL + \LanguageBS}}}{\renewcommand{\LanguageBB}{#4}}
+    \ifstrempty{#2}{\renewcommand{\LanguageBL}{1}}{\renewcommand{\LanguageBL}{#2}}
+    \ifstrempty{#3}{\renewcommand{\LanguageBS}{\INTValue}}{\renewcommand{\LanguageBS}{#3}}
+    }
 }
 
 \newcommand{\LibrarySearchL}{2}
@@ -412,50 +413,54 @@
 
 \newcommand{\LocalAName}{}
 \newcommand{\LocalAL}{}
-\newcommand{\LocalAS}{\INTValue}
+\newcommand{\LocalAS}{}
 \newcommand{\LocalAB}{}
 
 \newcommand{\LocalA}[4]{
-    \ifstrempty{#1}{}{\renewcommand{\LocalAName}{#1}}
-    \ifstrempty{#2}{}{\renewcommand{\LocalAL}{#2}}
-    \ifstrempty{#3}{}{\renewcommand{\LocalAS}{#3}}
+    \ifstrempty{#1}{}{\renewcommand{\LocalAName}{#1}
+    \ifstrempty{#2}{\renewcommand{\LocalAL}{1}}{\renewcommand{\LocalAL}{#2}}
+    \ifstrempty{#3}{\renewcommand{\LocalAS}{\INTValue}}{\renewcommand{\LocalAS}{#3}}
     \ifstrempty{#4}{\renewcommand{\LocalAB}{\fpeval{\LocalAL + \LocalAS}}}{\renewcommand{\LocalAB}{#4}}
+    }
 }
 
 \newcommand{\LocalBName}{}
 \newcommand{\LocalBL}{}
-\newcommand{\LocalBS}{\INTValue}
+\newcommand{\LocalBS}{}
 \newcommand{\LocalBB}{}
 
 \newcommand{\LocalB}[4]{
-    \ifstrempty{#1}{}{\renewcommand{\LocalBName}{#1}}
-    \ifstrempty{#2}{}{\renewcommand{\LocalBL}{#2}}
-    \ifstrempty{#3}{}{\renewcommand{\LocalBS}{#3}}
+    \ifstrempty{#1}{}{\renewcommand{\LocalBName}{#1}
+    \ifstrempty{#2}{\renewcommand{\LocalBL}{1}}{\renewcommand{\LocalBL}{#2}}
+    \ifstrempty{#3}{\renewcommand{\LocalBS}{\INTValue}}{\renewcommand{\LocalBS}{#3}}
     \ifstrempty{#4}{\renewcommand{\LocalBB}{\fpeval{\LocalBL + \LocalBS}}}{\renewcommand{\LocalBB}{#4}}
+    }
 }
 
 \newcommand{\ScienceAName}{}
 \newcommand{\ScienceAL}{}
-\newcommand{\ScienceAS}{\INTValue}
+\newcommand{\ScienceAS}{}
 \newcommand{\ScienceAB}{}
 
 \newcommand{\ScienceA}[4]{
-    \ifstrempty{#1}{}{\renewcommand{\ScienceAName}{#1}}
-    \ifstrempty{#2}{}{\renewcommand{\ScienceAL}{#2}}
-    \ifstrempty{#3}{}{\renewcommand{\ScienceAS}{#3}}
+    \ifstrempty{#1}{}{\renewcommand{\ScienceAName}{#1}
+    \ifstrempty{#2}{\renewcommand{\ScienceAL}{1}}{\renewcommand{\ScienceAL}{#2}}
+    \ifstrempty{#3}{\renewcommand{\ScienceAS}{\INTValue}}{\renewcommand{\ScienceAS}{#3}}
     \ifstrempty{#4}{\renewcommand{\ScienceAB}{\fpeval{\ScienceAL + \ScienceAS}}}{\renewcommand{\ScienceAB}{#4}}
+    }
 }
 
 \newcommand{\ScienceBName}{}
 \newcommand{\ScienceBL}{}
-\newcommand{\ScienceBS}{\INTValue}
+\newcommand{\ScienceBS}{}
 \newcommand{\ScienceBB}{}
 
 \newcommand{\ScienceB}[4]{
-    \ifstrempty{#1}{}{\renewcommand{\ScienceBName}{#1}}
-    \ifstrempty{#2}{}{\renewcommand{\ScienceBL}{#2}}
-    \ifstrempty{#3}{}{\renewcommand{\ScienceBS}{#3}}
+    \ifstrempty{#1}{}{\renewcommand{\ScienceBName}{#1}
+    \ifstrempty{#2}{\renewcommand{\ScienceBL}{1}}{\renewcommand{\ScienceBL}{#2}}
+    \ifstrempty{#3}{\renewcommand{\ScienceBS}{\INTValue}}{\renewcommand{\ScienceBS}{#3}}
     \ifstrempty{#4}{\renewcommand{\ScienceBB}{\fpeval{\ScienceBL + \ScienceBS}}}{\renewcommand{\ScienceBB}{#4}}
+    }
 }
 
 \newcommand{\TacticsL}{0}
@@ -478,3 +483,110 @@
     \ifstrempty{#3}{\renewcommand{\WildernessB}{\fpeval{\WildernessL + \WildernessS}}}{\renewcommand{\WildernessB}{#3}}
 }
 
+\newcommand{\BrawlingL}{2}
+\newcommand{\BrawlingS}{\DEXValue}
+\newcommand{\BrawlingB}{\fpeval{\BrawlingL + \BrawlingS}}
+
+\newcommand{\Brawling}[3]{
+    \ifstrempty{#1}{}{\renewcommand{\BrawlingL}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\BrawlingS}{#2}}
+    \ifstrempty{#3}{\renewcommand{\BrawlingB}{\fpeval{\BrawlingL + \BrawlingS}}}{\renewcommand{\BrawlingB}{#3}}
+}
+
+\newcommand{\EvasionL}{2}
+\newcommand{\EvasionS}{\DEXValue}
+\newcommand{\EvasionB}{\fpeval{\EvasionL + \EvasionS}}
+
+\newcommand{\Evasion}[3]{
+    \ifstrempty{#1}{}{\renewcommand{\EvasionL}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\EvasionS}{#2}}
+    \ifstrempty{#3}{\renewcommand{\EvasionB}{\fpeval{\EvasionL + \EvasionS}}}{\renewcommand{\EvasionB}{#3}}
+}
+
+\newcommand{\MartialArtsL}{0}
+\newcommand{\MartialArtsS}{\DEXValue}
+\newcommand{\MartialArtsB}{\fpeval{\MartialArtsL + \MartialArtsS}}
+
+\newcommand{\MartialArts}[3]{
+    \ifstrempty{#1}{}{\renewcommand{\MartialArtsL}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\MartialArtsS}{#2}}
+    \ifstrempty{#3}{\renewcommand{\MartialArtsB}{\fpeval{\MartialArtsL + \MartialArtsS}}}{\renewcommand{\MartialArtsB}{#3}}
+}
+
+\newcommand{\MeleeWeaponL}{0}
+\newcommand{\MeleeWeaponS}{\DEXValue}
+\newcommand{\MeleeWeaponB}{\fpeval{\MeleeWeaponL + \MeleeWeaponS}}
+
+\newcommand{\MeleeWeapon}[3]{
+    \ifstrempty{#1}{}{\renewcommand{\MeleeWeaponL}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\MeleeWeaponS}{#2}}
+    \ifstrempty{#3}{\renewcommand{\MeleeWeaponB}{\fpeval{\MeleeWeaponL + \MeleeWeaponS}}}{\renewcommand{\MeleeWeaponB}{#3}}
+}
+
+\newcommand{\ActingL}{0}
+\newcommand{\ActingS}{\COOLValue}
+\newcommand{\ActingB}{\fpeval{\ActingL + \ActingS}}
+
+\newcommand{\Acting}[3]{
+    \ifstrempty{#1}{}{\renewcommand{\ActingL}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\ActingS}{#2}}
+    \ifstrempty{#3}{\renewcommand{\ActingB}{\fpeval{\ActingL + \ActingS}}}{\renewcommand{\ActingB}{#3}}
+}
+
+\newcommand{\InstrumentAName}{}
+\newcommand{\InstrumentAL}{}
+\newcommand{\InstrumentAS}{}
+\newcommand{\InstrumentAB}{}
+
+\newcommand{\InstrumentA}[4]{
+    \ifstrempty{#1}{}{\renewcommand{\InstrumentAName}{#1}
+    \ifstrempty{#2}{\renewcommand{\InstrumentAL}{1}}{\renewcommand{\InstrumentAL}{#2}}
+    \ifstrempty{#3}{\renewcommand{\InstrumentAS}{\TECHValue}}{\renewcommand{\InstrumentAS}{#3}}
+    \ifstrempty{#4}{\renewcommand{\InstrumentAB}{\fpeval{\InstrumentAL + \InstrumentAS}}}{\renewcommand{\InstrumentAB}{#4}}
+    }
+}
+
+\newcommand{\InstrumentBName}{}
+\newcommand{\InstrumentBL}{}
+\newcommand{\InstrumentBS}{}
+\newcommand{\InstrumentBB}{}
+
+\newcommand{\InstrumentB}[4]{
+    \ifstrempty{#1}{}{\renewcommand{\InstrumentBName}{#1}
+    \ifstrempty{#2}{\renewcommand{\InstrumentBL}{1}}{\renewcommand{\InstrumentBL}{#2}}
+    \ifstrempty{#3}{\renewcommand{\InstrumentBS}{\TECHValue}}{\renewcommand{\InstrumentBS}{#3}}
+    \ifstrempty{#4}{\renewcommand{\InstrumentBB}{\fpeval{\InstrumentBL + \InstrumentBS}}}{\renewcommand{\InstrumentBB}{#4}}
+    }
+}
+
+\newcommand{\ArcheryL}{0}
+\newcommand{\ArcheryS}{\REFValue}
+\newcommand{\ArcheryB}{\fpeval{\ArcheryL + \ArcheryS}}
+
+\newcommand{\Archery}[3]{
+    \ifstrempty{#1}{}{\renewcommand{\ArcheryL}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\ArcheryS}{#2}}
+    \ifstrempty{#3}{\renewcommand{\ArcheryB}{\fpeval{\ArcheryL + \ArcheryS}}}{\renewcommand{\ArcheryB}{#3}}
+}
+
+\newcommand{\AutofireL}{0}
+\newcommand{\AutofireS}{\REFValue}
+\newcommand{\AutofireB}{\fpeval{\AutofireL + \AutofireS}}
+
+\newcommand{\Autofire}[3]{
+    \ifstrempty{#1}{}{\renewcommand{\AutofireL}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\AutofireS}{#2}}
+    \ifstrempty{#3}{\renewcommand{\AutofireB}{\fpeval{\AutofireL + \AutofireS}}}{\renewcommand{\AutofireB}{#3}}
+}
+
+\newcommand{\HandgunL}{0}
+\newcommand{\HandgunS}{\REFValue}
+\newcommand{\HandgunB}{\fpeval{\HandgunL + \HandgunS}}
+
+\newcommand{\Handgun}[3]{
+    \ifstrempty{#1}{}{\renewcommand{\HandgunL}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\HandgunS}{#2}}
+    \ifstrempty{#3}{\renewcommand{\HandgunB}{\fpeval{\HandgunL + \HandgunS}}}{\renewcommand{\HandgunB}{#3}}
+}
+
+% % % SKILLS - 3rd Column  % % %
