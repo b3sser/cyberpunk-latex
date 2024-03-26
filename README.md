@@ -28,9 +28,9 @@ Look at ```example-character.tex``` for guidance
 
 <!--
 #### Auto-calculation of stats
-If you want auto-calculation, make sure to leave the fields supporting this feature blank or removing their commands completely. In ```empty-auto.tex```, these are already removed.
+If you want auto-calculation, make sure to leave the fields supporting this feature blank.
 
-When working with auto-calculation, you can overwrite selected values with your own input (e.g. when an item you have changes that value), simply by using the command like you would in a sheet without auto-calculation. The calculated value is only set as the default and can be overwritten this way. If you do not know the name of the needed command, take a look at ```empty.tex```
+When working with auto-calculation, you can overwrite selected values with your own input (e.g. when an item you have changes that value), simply by using the command like you would in a sheet without auto-calculation. The calculated value is only set as the default and can be overwritten this way.
 -->
 
 ## Compilation & Dependencies

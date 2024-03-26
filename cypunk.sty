@@ -18,7 +18,10 @@
 % Set paragraph and line spacing
 \setlength {\parindent} {1em}
 \linespread {0.8}
-% Set column seperator in tabular
+% Set column and row seperators
+% for tblr (provided by tabularray package)
+\SetTblrInner{rowsep=1.6pt, colsep=3pt}
+% for normal tabular
 \setlength{\tabcolsep}{3pt}
 
 % Restrict hyphenation
@@ -45,8 +48,7 @@
 \setitemize{noitemsep,topsep=0.5ex,label=\footnotesize{$\bullet$}}
 
 % Load other modules of this package after all dependencies to avoid load order conflicts
-\input{lib/cypunk-libload.def}
-
+\input{lib/cypunk-libload.def} % TODO check if this necessary and ggf. remove or change
 \input{template/commands-1.tex}
 
 % Rendering Commands

@@ -35,18 +35,18 @@
 
 
 % % %  STATS  % % %
-\newcommand{\INTValue}{0}
-\newcommand{\REFValue}{0}
-\newcommand{\DEXValue}{0}
-\newcommand{\TECHValue}{0}
-\newcommand{\COOLValue}{0}
-\newcommand{\WILLValue}{0}
+\newcommand{\INTValue}{2}
+\newcommand{\REFValue}{2}
+\newcommand{\DEXValue}{2}
+\newcommand{\TECHValue}{2}
+\newcommand{\COOLValue}{2}
+\newcommand{\WILLValue}{2}
 \newcommand{\LUCKnowValue}{0}
-\newcommand{\LUCKmaxValue}{0}
-\newcommand{\MOVEValue}{0}
-\newcommand{\BODYValue}{0}
+\newcommand{\LUCKmaxValue}{2}
+\newcommand{\MOVEValue}{2}
+\newcommand{\BODYValue}{2}
 \newcommand{\EMPnowValue}{0}
-\newcommand{\EMPmaxValue}{0}
+\newcommand{\EMPmaxValue}{2}
 
 \newcommand{\INT}[1]{\renewcommand{\INTValue}{#1}}
 \newcommand{\REF}[1]{\renewcommand{\REFValue}{#1}}
@@ -93,6 +93,7 @@
     \renewcommand{\ShieldPen}{#3}
 }
 
+% % %  WEAPONS  % % %
 \newcommand\WeaponsTable{}
 
 \makeatletter
@@ -100,3 +101,255 @@
   \g@addto@macro\WeaponsTable{\footnotesize #1 & \centering #2 & \footnotesize \centering #3 & \centering #4 & \scriptsize #5 \\}
 }
 \makeatother
+
+
+% % % SKILLS % % %
+\newcommand{\ConcentrationL}{2}
+\newcommand{\ConcentrationS}{\WILLValue}
+\newcommand{\ConcentrationB}{\fpeval{\ConcentrationL + \ConcentrationS}}
+
+\newcommand{\Concentration}[3]{
+    \ifstrempty{#1}{}{\renewcommand{\ConcentrationL}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\ConcentrationS}{#2}}
+    \ifstrempty{#3}{\renewcommand{\ConcentrationB}{\fpeval{\ConcentrationL + \ConcentrationS}}}{\renewcommand{\ConcentrationB}{#3}}
+}
+
+\newcommand{\ConcealRevealL}{0}
+\newcommand{\ConcealRevealS}{\INTValue}
+\newcommand{\ConcealRevealB}{\fpeval{\ConcealRevealL + \ConcealRevealS}}
+
+\newcommand{\ConcealReveal}[3]{
+    \ifstrempty{#1}{}{\renewcommand{\ConcealRevealL}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\ConcealRevealS}{#2}}
+    \ifstrempty{#3}{\renewcommand{\ConcealRevealB}{\fpeval{\ConcealRevealL + \ConcealRevealS}}}{\renewcommand{\ConcealRevealB}{#3}}
+}
+
+\newcommand{\LipReadingL}{0}
+\newcommand{\LipReadingS}{\INTValue}
+\newcommand{\LipReadingB}{\fpeval{\LipReadingL + \LipReadingS}}
+
+\newcommand{\LipReading}[3]{
+    \ifstrempty{#1}{}{\renewcommand{\LipReadingL}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\LipReadingS}{#2}}
+    \ifstrempty{#3}{\renewcommand{\LipReadingB}{\fpeval{\LipReadingL + \LipReadingS}}}{\renewcommand{\LipReadingB}{#3}}
+}
+
+\newcommand{\PerceptionL}{2}
+\newcommand{\PerceptionS}{\INTValue}
+\newcommand{\PerceptionB}{\fpeval{\PerceptionL + \PerceptionS}}
+
+\newcommand{\Perception}[3]{
+    \ifstrempty{#1}{}{\renewcommand{\PerceptionL}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\PerceptionS}{#2}}
+    \ifstrempty{#3}{\renewcommand{\PerceptionB}{\fpeval{\PerceptionL + \PerceptionS}}}{\renewcommand{\PerceptionB}{#3}}
+}
+
+\newcommand{\TrackingL}{0}
+\newcommand{\TrackingS}{\INTValue}
+\newcommand{\TrackingB}{\fpeval{\TrackingL + \TrackingS}}
+
+\newcommand{\Tracking}[3]{
+    \ifstrempty{#1}{}{\renewcommand{\TrackingL}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\TrackingS}{#2}}
+    \ifstrempty{#3}{\renewcommand{\TrackingB}{\fpeval{\TrackingL + \TrackingS}}}{\renewcommand{\TrackingB}{#3}}
+}
+
+\newcommand{\AthleticsL}{2}
+\newcommand{\AthleticsS}{\DEXValue}
+\newcommand{\AthleticsB}{\fpeval{\AthleticsL + \AthleticsS}}
+
+\newcommand{\Athletics}[3]{
+    \ifstrempty{#1}{}{\renewcommand{\AthleticsL}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\AthleticsS}{#2}}
+    \ifstrempty{#3}{\renewcommand{\AthleticsB}{\fpeval{\AthleticsL + \AthleticsS}}}{\renewcommand{\AthleticsB}{#3}}
+}
+
+\newcommand{\ContortionistL}{0}
+\newcommand{\ContortionistS}{\DEXValue}
+\newcommand{\ContortionistB}{\fpeval{\ContortionistL + \ContortionistS}}
+
+\newcommand{\Contortionist}[3]{
+    \ifstrempty{#1}{}{\renewcommand{\ContortionistL}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\ContortionistS}{#2}}
+    \ifstrempty{#3}{\renewcommand{\ContortionistB}{\fpeval{\ContortionistL + \ContortionistS}}}{\renewcommand{\ContortionistB}{#3}}
+}
+
+\newcommand{\DanceL}{0}
+\newcommand{\DanceS}{\DEXValue}
+\newcommand{\DanceB}{\fpeval{\DanceL + \DanceS}}
+
+\newcommand{\Dance}[3]{
+    \ifstrempty{#1}{}{\renewcommand{\DanceL}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\DanceS}{#2}}
+    \ifstrempty{#3}{\renewcommand{\DanceB}{\fpeval{\DanceL + \DanceS}}}{\renewcommand{\DanceB}{#3}}
+}
+
+\newcommand{\EnduranceL}{0}
+\newcommand{\EnduranceS}{\WILLValue}
+\newcommand{\EnduranceB}{\fpeval{\EnduranceL + \EnduranceS}}
+
+\newcommand{\Endurance}[3]{
+    \ifstrempty{#1}{}{\renewcommand{\EnduranceL}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\EnduranceS}{#2}}
+    \ifstrempty{#3}{\renewcommand{\EnduranceB}{\fpeval{\EnduranceL + \EnduranceS}}}{\renewcommand{\EnduranceB}{#3}}
+}
+
+\newcommand{\ResistTortureDrugsL}{0}
+\newcommand{\ResistTortureDrugsS}{\WILLValue}
+\newcommand{\ResistTortureDrugsB}{\fpeval{\ResistTortureDrugsL + \ResistTortureDrugsS}}
+
+\newcommand{\ResistTortureDrugs}[3]{
+    \ifstrempty{#1}{}{\renewcommand{\ResistTortureDrugsL}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\ResistTortureDrugsS}{#2}}
+    \ifstrempty{#3}{\renewcommand{\ResistTortureDrugsB}{\fpeval{\ResistTortureDrugsL + \ResistTortureDrugsS}}}{\renewcommand{\ResistTortureDrugsB}{#3}}
+}
+
+\newcommand{\StealthL}{2}
+\newcommand{\StealthS}{\DEXValue}
+\newcommand{\StealthB}{\fpeval{\StealthL + \StealthS}}
+
+\newcommand{\Stealth}[3]{
+    \ifstrempty{#1}{}{\renewcommand{\StealthL}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\StealthS}{#2}}
+    \ifstrempty{#3}{\renewcommand{\StealthB}{\fpeval{\StealthL + \StealthS}}}{\renewcommand{\StealthB}{#3}}
+}
+
+\newcommand{\DriveLandL}{0}
+\newcommand{\DriveLandS}{\REFValue}
+\newcommand{\DriveLandB}{\fpeval{\DriveLandL + \DriveLandS}}
+
+\newcommand{\DriveLand}[3]{
+    \ifstrempty{#1}{}{\renewcommand{\DriveLandL}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\DriveLandS}{#2}}
+    \ifstrempty{#3}{\renewcommand{\DriveLandB}{\fpeval{\DriveLandL + \DriveLandS}}}{\renewcommand{\DriveLandB}{#3}}
+}
+
+\newcommand{\PilotAirL}{0}
+\newcommand{\PilotAirS}{\REFValue}
+\newcommand{\PilotAirB}{\fpeval{\PilotAirL + \PilotAirS}}
+
+\newcommand{\PilotAir}[3]{
+    \ifstrempty{#1}{}{\renewcommand{\PilotAirL}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\PilotAirS}{#2}}
+    \ifstrempty{#3}{\renewcommand{\PilotAirB}{\fpeval{\PilotAirL + \PilotAirS}}}{\renewcommand{\PilotAirB}{#3}}
+}
+
+\newcommand{\PilotSeaL}{0}
+\newcommand{\PilotSeaS}{\REFValue}
+\newcommand{\PilotSeaB}{\fpeval{\PilotSeaL + \PilotSeaS}}
+
+\newcommand{\PilotSea}[3]{
+    \ifstrempty{#1}{}{\renewcommand{\PilotSeaL}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\PilotSeaS}{#2}}
+    \ifstrempty{#3}{\renewcommand{\PilotSeaB}{\fpeval{\PilotSeaL + \PilotSeaS}}}{\renewcommand{\PilotSeaB}{#3}}
+}
+
+\newcommand{\RidingL}{0}
+\newcommand{\RidingS}{\REFValue}
+\newcommand{\RidingB}{\fpeval{\RidingL + \RidingS}}
+
+\newcommand{\Riding}[3]{
+    \ifstrempty{#1}{}{\renewcommand{\RidingL}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\RidingS}{#2}}
+    \ifstrempty{#3}{\renewcommand{\RidingB}{\fpeval{\RidingL + \RidingS}}}{\renewcommand{\RidingB}{#3}}
+}
+
+\newcommand{\AccountingL}{0}
+\newcommand{\AccountingS}{\INTValue}
+\newcommand{\AccountingB}{\fpeval{\AccountingL + \AccountingS}}
+
+\newcommand{\Accounting}[3]{
+    \ifstrempty{#1}{}{\renewcommand{\AccountingL}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\AccountingS}{#2}}
+    \ifstrempty{#3}{\renewcommand{\AccountingB}{\fpeval{\AccountingL + \AccountingS}}}{\renewcommand{\AccountingB}{#3}}
+}
+
+\newcommand{\AnimalHandlingL}{0}
+\newcommand{\AnimalHandlingS}{\INTValue}
+\newcommand{\AnimalHandlingB}{\fpeval{\AnimalHandlingL + \AnimalHandlingS}}
+
+\newcommand{\AnimalHandling}[3]{
+    \ifstrempty{#1}{}{\renewcommand{\AnimalHandlingL}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\AnimalHandlingS}{#2}}
+    \ifstrempty{#3}{\renewcommand{\AnimalHandlingB}{\fpeval{\AnimalHandlingL + \AnimalHandlingS}}}{\renewcommand{\AnimalHandlingB}{#3}}
+}
+
+\newcommand{\BureaucracyL}{0}
+\newcommand{\BureaucracyS}{\INTValue}
+\newcommand{\BureaucracyB}{\fpeval{\BureaucracyL + \BureaucracyS}}
+
+\newcommand{\Bureaucracy}[3]{
+    \ifstrempty{#1}{}{\renewcommand{\BureaucracyL}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\BureaucracyS}{#2}}
+    \ifstrempty{#3}{\renewcommand{\BureaucracyB}{\fpeval{\BureaucracyL + \BureaucracyS}}}{\renewcommand{\BureaucracyB}{#3}}
+}
+
+\newcommand{\BusinessL}{0}
+\newcommand{\BusinessS}{\INTValue}
+\newcommand{\BusinessB}{\fpeval{\BusinessL + \BusinessS}}
+
+\newcommand{\Business}[3]{
+    \ifstrempty{#1}{}{\renewcommand{\BusinessL}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\BusinessS}{#2}}
+    \ifstrempty{#3}{\renewcommand{\BusinessB}{\fpeval{\BusinessL + \BusinessS}}}{\renewcommand{\BusinessB}{#3}}
+}
+
+\newcommand{\CompositionL}{0}
+\newcommand{\CompositionS}{\INTValue}
+\newcommand{\CompositionB}{\fpeval{\CompositionL + \CompositionS}}
+
+\newcommand{\Composition}[3]{
+    \ifstrempty{#1}{}{\renewcommand{\CompositionL}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\CompositionS}{#2}}
+    \ifstrempty{#3}{\renewcommand{\CompositionB}{\fpeval{\CompositionL + \CompositionS}}}{\renewcommand{\CompositionB}{#3}}
+}
+
+\newcommand{\CriminologyL}{0}
+\newcommand{\CriminologyS}{\INTValue}
+\newcommand{\CriminologyB}{\fpeval{\CriminologyL + \CriminologyS}}
+
+\newcommand{\Criminology}[3]{
+    \ifstrempty{#1}{}{\renewcommand{\CriminologyL}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\CriminologyS}{#2}}
+    \ifstrempty{#3}{\renewcommand{\CriminologyB}{\fpeval{\CriminologyL + \CriminologyS}}}{\renewcommand{\CriminologyB}{#3}}
+}
+
+\newcommand{\CryptographyL}{0}
+\newcommand{\CryptographyS}{\INTValue}
+\newcommand{\CryptographyB}{\fpeval{\CryptographyL + \CryptographyS}}
+
+\newcommand{\Cryptography}[3]{
+    \ifstrempty{#1}{}{\renewcommand{\CryptographyL}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\CryptographyS}{#2}}
+    \ifstrempty{#3}{\renewcommand{\CryptographyB}{\fpeval{\CryptographyL + \CryptographyS}}}{\renewcommand{\CryptographyB}{#3}}
+}
+
+\newcommand{\DeductionL}{0}
+\newcommand{\DeductionS}{\INTValue}
+\newcommand{\DeductionB}{\fpeval{\DeductionL + \DeductionS}}
+
+\newcommand{\Deduction}[3]{
+    \ifstrempty{#1}{}{\renewcommand{\DeductionL}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\DeductionS}{#2}}
+    \ifstrempty{#3}{\renewcommand{\DeductionB}{\fpeval{\DeductionL + \DeductionS}}}{\renewcommand{\DeductionB}{#3}}
+}
+
+\newcommand{\EducationL}{2}
+\newcommand{\EducationS}{\INTValue}
+\newcommand{\EducationB}{\fpeval{\EducationL + \EducationS}}
+
+\newcommand{\Education}[3]{
+    \ifstrempty{#1}{}{\renewcommand{\EducationL}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\EducationS}{#2}}
+    \ifstrempty{#3}{\renewcommand{\EducationB}{\fpeval{\EducationL + \EducationS}}}{\renewcommand{\EducationB}{#3}}
+}
+
+\newcommand{\GambleL}{0}
+\newcommand{\GambleS}{\INTValue}
+\newcommand{\GambleB}{\fpeval{\GambleL + \GambleS}}
+
+\newcommand{\Gamble}[3]{
+    \ifstrempty{#1}{}{\renewcommand{\GambleL}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\GambleS}{#2}}
+    \ifstrempty{#3}{\renewcommand{\GambleB}{\fpeval{\GambleL + \GambleS}}}{\renewcommand{\GambleB}{#3}}
+}
