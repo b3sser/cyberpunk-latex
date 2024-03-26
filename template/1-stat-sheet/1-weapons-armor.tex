@@ -1,0 +1,28 @@
+% % %  ARMOR  % % %
+\rput(330,104){\small \HeadArmorName}
+\rput(387,104){\small \HeadArmorSP}
+\rput(422,104){\small \HeadArmorPen}
+
+\rput(330,90.5){\small \BodyArmorName}
+\rput(387,90.5){\small \BodyArmorSP}
+\rput(422,90.5){\small \BodyArmorPen}
+
+\rput(330,77){\small \ShieldName}
+\rput(387,77){\small \ShieldSP}
+\rput(422,77){\small \ShieldPen}
+
+% \rput[lt](164,147){\parbox{82pt}{\small \justify \CritInjuriesValue}}
+% \rput[lt](164,95){\parbox{82pt}{\small \justify \AddictionsValue}}
+
+
+% % % %  WEAPONS  % % %
+\rput[lt](447,142){
+    \parbox{315pt}{
+        \justify
+        \renewcommand{\arraystretch}{1.4}
+        \begin{tabular}{p{90pt}p{25.5pt}p{32pt}p{21pt}p{118.5pt}}
+            \WeaponsTable
+        \end{tabular}
+        \renewcommand{\arraystretch}{1} % Reset to default value 1
+    }
+}

@@ -1,0 +1,102 @@
+% % %  BASIC INFO  % % %
+\newcommand{\CharacterPhotoValue}{}
+\newcommand{\HandleValue}{}
+\newcommand{\RoleValue}{}
+\newcommand{\RoleAbilityValue}{}
+\newcommand{\RoleRankValue}{}
+\newcommand{\NotesValue}{}
+
+\newcommand{\CharacterPhoto}[1]{\renewcommand{\CharacterPhotoValue}{#1}}
+\newcommand{\Handle}[1]{\renewcommand{\HandleValue}{#1}}
+\newcommand{\Role}[1]{\renewcommand{\RoleValue}{#1}}
+\newcommand{\RoleAbility}[1]{\renewcommand{\RoleAbilityValue}{#1}}
+\newcommand{\RoleRank}[1]{\renewcommand{\RoleRankValue}{#1}}
+\newcommand{\Notes}[1]{\renewcommand{\NotesValue}{#1}}
+
+
+% % %  HEALTH  % % %
+\newcommand{\HumanityNowValue}{}
+\newcommand{\HumanityMaxValue}{}
+\newcommand{\HPnowValue}{}
+\newcommand{\HPmaxValue}{}
+\newcommand{\SeriouslyWoundedValue}{}
+\newcommand{\DeathSaveValue}{}
+\newcommand{\CritInjuriesValue}{}
+\newcommand{\AddictionsValue}{}
+
+\newcommand{\HumanityNow}[1]{\renewcommand{\HumanityNowValue}{#1}}
+\newcommand{\HumanityMax}[1]{\renewcommand{\HumanityMaxValue}{#1}}
+\newcommand{\HPnow}[1]{\renewcommand{\HPnowValue}{#1}}
+\newcommand{\HPmax}[1]{\renewcommand{\HPmaxValue}{#1}}
+\newcommand{\SeriouslyWounded}[1]{\renewcommand{\SeriouslyWoundedValue}{#1}}
+\newcommand{\DeathSave}[1]{\renewcommand{\DeathSaveValue}{#1}}
+\newcommand{\CritInjuries}[1]{\renewcommand{\CritInjuriesValue}{#1}}
+\newcommand{\Addictions}[1]{\renewcommand{\AddictionsValue}{#1}}
+
+
+% % %  STATS  % % %
+\newcommand{\INTValue}{0}
+\newcommand{\REFValue}{0}
+\newcommand{\DEXValue}{0}
+\newcommand{\TECHValue}{0}
+\newcommand{\COOLValue}{0}
+\newcommand{\WILLValue}{0}
+\newcommand{\LUCKnowValue}{0}
+\newcommand{\LUCKmaxValue}{0}
+\newcommand{\MOVEValue}{0}
+\newcommand{\BODYValue}{0}
+\newcommand{\EMPnowValue}{0}
+\newcommand{\EMPmaxValue}{0}
+
+\newcommand{\INT}[1]{\renewcommand{\INTValue}{#1}}
+\newcommand{\REF}[1]{\renewcommand{\REFValue}{#1}}
+\newcommand{\DEX}[1]{\renewcommand{\DEXValue}{#1}}
+\newcommand{\TECH}[1]{\renewcommand{\TECHValue}{#1}}
+\newcommand{\COOL}[1]{\renewcommand{\COOLValue}{#1}}
+\newcommand{\WILL}[1]{\renewcommand{\WILLValue}{#1}}
+\newcommand{\LUCKnow}[1]{\renewcommand{\LUCKnowValue}{#1}}
+\newcommand{\LUCKmax}[1]{\renewcommand{\LUCKmaxValue}{#1}}
+\newcommand{\MOVE}[1]{\renewcommand{\MOVEValue}{#1}}
+\newcommand{\BODY}[1]{\renewcommand{\BODYValue}{#1}}
+\newcommand{\EMPnow}[1]{\renewcommand{\EMPnowValue}{#1}}
+\newcommand{\EMPmax}[1]{\renewcommand{\EMPmaxValue}{#1}}
+
+
+% % %  ARMOR  % % %
+\newcommand{\HeadArmorName}{}
+\newcommand{\HeadArmorSP}{}
+\newcommand{\HeadArmorPen}{}
+
+\newcommand{\HeadArmor}[3]{
+    \renewcommand{\HeadArmorName}{#1}
+    \renewcommand{\HeadArmorSP}{#2}
+    \renewcommand{\HeadArmorPen}{#3}
+}
+
+\newcommand{\BodyArmorName}{}
+\newcommand{\BodyArmorSP}{}
+\newcommand{\BodyArmorPen}{}
+
+\newcommand{\BodyArmor}[3]{
+    \renewcommand{\BodyArmorName}{#1}
+    \renewcommand{\BodyArmorSP}{#2}
+    \renewcommand{\BodyArmorPen}{#3}
+}
+
+\newcommand{\ShieldName}{}
+\newcommand{\ShieldSP}{}
+\newcommand{\ShieldPen}{}
+
+\newcommand{\Shield}[3]{
+    \renewcommand{\ShieldName}{#1}
+    \renewcommand{\ShieldSP}{#2}
+    \renewcommand{\ShieldPen}{#3}
+}
+
+\newcommand\WeaponsTable{}
+
+\makeatletter
+\newcommand\AddWeapon[5]{%
+  \g@addto@macro\WeaponsTable{\footnotesize #1 & \centering #2 & \footnotesize \centering #3 & \centering #4 & \scriptsize #5 \\}
+}
+\makeatother

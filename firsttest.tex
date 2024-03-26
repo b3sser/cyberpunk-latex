@@ -4,40 +4,67 @@
 % Set input language
 \usepackage[UKenglish]{babel}
 
+% % % % % % % % % % % % % % % % % % % % % % % %
+% %              HOW TO USE                 % %
+% % 1. Copy empty. tex                      % %
+% % 2. Fill commands with your values/text  % %
+% % 3. Compile with XeTeX                   % %
+% %                                         % %
+% % Please refer to README.MD for more      % %
+% % Also check out example-character.tex    % %
+% % % % % % % % % % % % % % % % % % % % % % % %
+
+
 % % % BASIC INFO % % %
 \CharacterPhoto{img/Nova}
 % put a file path (e.g. img/myphoto)
 % works best with aspect ratio 540 x 511
-\Handle{Handle}
-\Role{Role}
-\RoleAbility{Role Ability}
+\Handle{Nova}
+\Role{Fixer}
+\RoleAbility{Operator}
 \RoleRank{4}
 \Notes{Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.}
 
-% % % HEALTH % % %
-\HPnow{20}
-\HPmax{30}          % 10 + (5*[BODY and WILL averaged, rounding up])
-\SeriouslyWounded{15} % Half HPmax
-\DeathSave{8}       % = BODY
-\CritInjuries{Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eir mod tempor invi}
+% % %  HEALTH  % % %
+\HumanityNow{40}
+\HumanityMax{46}      % EMP * 10
+
+\HPnow{35}
+\HPmax{40}            % 10 + (5*[BODY and WILL averaged, rounding up])
+\SeriouslyWounded{20} % Half HPmax
+\DeathSave{4}         % = BODY
+
+\CritInjuries{Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eir}
 \Addictions{Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy}
 
-% % % STATS % % %
-% \INT{}
-% \REF{}
-% \DEX{}
-% \TECH{}
-% \COOL{}
-% \WILL{}
-% \LUCKnow{}
-% \LUCKmax{}
-% \MOVE{}
-% \BODY{}
-% \EMPnow{}
-% \EMPmax{}
-% \HumanityNow{}
-% \HumanityMax{}      % EMP * 10
+
+% % %  STATS  % % %
+\INT{8}
+\REF{7}
+\DEX{3}
+\TECH{6}
+\COOL{8}
+\WILL{7}
+\LUCKnow{5}
+\LUCKmax{8}
+\MOVE{5}
+\BODY{4}
+\EMPnow{6}
+\EMPmax{6}
 
 
+% % %  ARMOR & WEAPONS  % % %
+% Enter the type/name of the armor in the first field, SP in the second and Penalty in the third
+\HeadArmor{Kevlar}{7}{--}
+\BodyArmor{Medium Armorjack}{12}{-2}
+\Shield{Bulletproof}{18}{one arm}
+
+% Use like this:
+% \AddWeapon{Name}{DMG}{Ammo}{ROF}{Notes}
+% Table on sheet holds up to 6 entries, but you can add as many as you like. Page edge should be reached after 10 entries.
+
+\AddWeapon{Tomahawk (Light Melee)}{1d6}{--}{2}{can be concealed}
+\AddWeapon{Assault Rifle}{5d6}{25 rifle}{1}{\tiny 2 hands, Autofire (4), Suppressive Fire}
+\AddWeapon{Sniper Rifle}{5d6}{4 rifle}{1}{two hands}
 
 \renderstatsheet
