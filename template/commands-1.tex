@@ -589,4 +589,264 @@
     \ifstrempty{#3}{\renewcommand{\HandgunB}{\fpeval{\HandgunL + \HandgunS}}}{\renewcommand{\HandgunB}{#3}}
 }
 
+
 % % % SKILLS - 3rd Column  % % %
+\newcommand{\HeavyWeaponsL}{0}
+\newcommand{\HeavyWeaponsS}{\REFValue}
+\newcommand{\HeavyWeaponsB}{\fpeval{\HeavyWeaponsL + \HeavyWeaponsS}}
+
+\newcommand{\HeavyWeapons}[3]{
+    \ifstrempty{#1}{}{\renewcommand{\HeavyWeaponsL}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\HeavyWeaponsS}{#2}}
+    \ifstrempty{#3}{\renewcommand{\HeavyWeaponsB}{\fpeval{\HeavyWeaponsL + \HeavyWeaponsS}}}{\renewcommand{\HeavyWeaponsB}{#3}}
+}
+
+\newcommand{\ShoulderArmsL}{0}
+\newcommand{\ShoulderArmsS}{\REFValue}
+\newcommand{\ShoulderArmsB}{\fpeval{\ShoulderArmsL + \ShoulderArmsS}}
+
+\newcommand{\ShoulderArms}[3]{
+    \ifstrempty{#1}{}{\renewcommand{\ShoulderArmsL}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\ShoulderArmsS}{#2}}
+    \ifstrempty{#3}{\renewcommand{\ShoulderArmsB}{\fpeval{\ShoulderArmsL + \ShoulderArmsS}}}{\renewcommand{\ShoulderArmsB}{#3}}
+}
+
+\newcommand{\BriberyL}{0}
+\newcommand{\BriberyS}{\COOLValue}
+\newcommand{\BriberyB}{\fpeval{\BriberyL + \BriberyS}}
+
+\newcommand{\Bribery}[3]{
+    \ifstrempty{#1}{}{\renewcommand{\BriberyL}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\BriberyS}{#2}}
+    \ifstrempty{#3}{\renewcommand{\BriberyB}{\fpeval{\BriberyL + \BriberyS}}}{\renewcommand{\BriberyB}{#3}}
+}
+
+\newcommand{\ConversationL}{2}
+\newcommand{\ConversationS}{\EMPnowValue}
+\newcommand{\ConversationB}{\fpeval{\ConversationL + \ConversationS}}
+
+\newcommand{\Conversation}[3]{
+    \ifstrempty{#1}{}{\renewcommand{\ConversationL}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\ConversationS}{#2}}
+    \ifstrempty{#3}{\renewcommand{\ConversationB}{\fpeval{\ConversationL + \ConversationS}}}{\renewcommand{\ConversationB}{#3}}
+}
+
+\newcommand{\HumanPerceptionL}{2}
+\newcommand{\HumanPerceptionS}{\EMPnowValue}
+\newcommand{\HumanPerceptionB}{\fpeval{\HumanPerceptionL + \HumanPerceptionS}}
+
+\newcommand{\HumanPerception}[3]{
+    \ifstrempty{#1}{}{\renewcommand{\HumanPerceptionL}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\HumanPerceptionS}{#2}}
+    \ifstrempty{#3}{\renewcommand{\HumanPerceptionB}{\fpeval{\HumanPerceptionL + \HumanPerceptionS}}}{\renewcommand{\HumanPerceptionB}{#3}}
+}
+
+\newcommand{\InterrogationL}{0}
+\newcommand{\InterrogationS}{\COOLValue}
+\newcommand{\InterrogationB}{\fpeval{\InterrogationL + \InterrogationS}}
+
+\newcommand{\Interrogation}[3]{
+    \ifstrempty{#1}{}{\renewcommand{\InterrogationL}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\InterrogationS}{#2}}
+    \ifstrempty{#3}{\renewcommand{\InterrogationB}{\fpeval{\InterrogationL + \InterrogationS}}}{\renewcommand{\InterrogationB}{#3}}
+}
+
+\newcommand{\PersuasionL}{2}
+\newcommand{\PersuasionS}{\COOLValue}
+\newcommand{\PersuasionB}{\fpeval{\PersuasionL + \PersuasionS}}
+
+\newcommand{\Persuasion}[3]{
+    \ifstrempty{#1}{}{\renewcommand{\PersuasionL}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\PersuasionS}{#2}}
+    \ifstrempty{#3}{\renewcommand{\PersuasionB}{\fpeval{\PersuasionL + \PersuasionS}}}{\renewcommand{\PersuasionB}{#3}}
+}
+
+\newcommand{\PersonalGroomingL}{0}
+\newcommand{\PersonalGroomingS}{\COOLValue}
+\newcommand{\PersonalGroomingB}{\fpeval{\PersonalGroomingL + \PersonalGroomingS}}
+
+\newcommand{\PersonalGrooming}[3]{
+    \ifstrempty{#1}{}{\renewcommand{\PersonalGroomingL}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\PersonalGroomingS}{#2}}
+    \ifstrempty{#3}{\renewcommand{\PersonalGroomingB}{\fpeval{\PersonalGroomingL + \PersonalGroomingS}}}{\renewcommand{\PersonalGroomingB}{#3}}
+}
+
+\newcommand{\StreetWiseL}{0}
+\newcommand{\StreetWiseS}{\COOLValue}
+\newcommand{\StreetWiseB}{\fpeval{\StreetWiseL + \StreetWiseS}}
+
+\newcommand{\StreetWise}[3]{
+    \ifstrempty{#1}{}{\renewcommand{\StreetWiseL}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\StreetWiseS}{#2}}
+    \ifstrempty{#3}{\renewcommand{\StreetWiseB}{\fpeval{\StreetWiseL + \StreetWiseS}}}{\renewcommand{\StreetWiseB}{#3}}
+}
+
+\newcommand{\TradingL}{0}
+\newcommand{\TradingS}{\COOLValue}
+\newcommand{\TradingB}{\fpeval{\TradingL + \TradingS}}
+
+\newcommand{\Trading}[3]{
+    \ifstrempty{#1}{}{\renewcommand{\TradingL}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\TradingS}{#2}}
+    \ifstrempty{#3}{\renewcommand{\TradingB}{\fpeval{\TradingL + \TradingS}}}{\renewcommand{\TradingB}{#3}}
+}
+
+\newcommand{\WardrobeL}{0}
+\newcommand{\WardrobeS}{\COOLValue}
+\newcommand{\WardrobeB}{\fpeval{\WardrobeL + \WardrobeS}}
+
+\newcommand{\Wardrobe}[3]{
+    \ifstrempty{#1}{}{\renewcommand{\WardrobeL}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\WardrobeS}{#2}}
+    \ifstrempty{#3}{\renewcommand{\WardrobeB}{\fpeval{\WardrobeL + \WardrobeS}}}{\renewcommand{\WardrobeB}{#3}}
+}
+
+\newcommand{\TechAirL}{0}
+\newcommand{\TechAirS}{\TECHValue}
+\newcommand{\TechAirB}{\fpeval{\TechAirL + \TechAirS}}
+
+\newcommand{\TechAir}[3]{
+    \ifstrempty{#1}{}{\renewcommand{\TechAirL}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\TechAirS}{#2}}
+    \ifstrempty{#3}{\renewcommand{\TechAirB}{\fpeval{\TechAirL + \TechAirS}}}{\renewcommand{\TechAirB}{#3}}
+}
+
+\newcommand{\TechBasicL}{0}
+\newcommand{\TechBasicS}{\TECHValue}
+\newcommand{\TechBasicB}{\fpeval{\TechBasicL + \TechBasicS}}
+
+\newcommand{\TechBasic}[3]{
+    \ifstrempty{#1}{}{\renewcommand{\TechBasicL}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\TechBasicS}{#2}}
+    \ifstrempty{#3}{\renewcommand{\TechBasicB}{\fpeval{\TechBasicL + \TechBasicS}}}{\renewcommand{\TechBasicB}{#3}}
+}
+
+\newcommand{\TechCyberL}{0}
+\newcommand{\TechCyberS}{\TECHValue}
+\newcommand{\TechCyberB}{\fpeval{\TechCyberL + \TechCyberS}}
+
+\newcommand{\TechCyber}[3]{
+    \ifstrempty{#1}{}{\renewcommand{\TechCyberL}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\TechCyberS}{#2}}
+    \ifstrempty{#3}{\renewcommand{\TechCyberB}{\fpeval{\TechCyberL + \TechCyberS}}}{\renewcommand{\TechCyberB}{#3}}
+}
+
+\newcommand{\DemolitionsL}{0}
+\newcommand{\DemolitionsS}{\TECHValue}
+\newcommand{\DemolitionsB}{\fpeval{\DemolitionsL + \DemolitionsS}}
+
+\newcommand{\Demolitions}[3]{
+    \ifstrempty{#1}{}{\renewcommand{\DemolitionsL}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\DemolitionsS}{#2}}
+    \ifstrempty{#3}{\renewcommand{\DemolitionsB}{\fpeval{\DemolitionsL + \DemolitionsS}}}{\renewcommand{\DemolitionsB}{#3}}
+}
+
+\newcommand{\TechSecurityL}{0}
+\newcommand{\TechSecurityS}{\TECHValue}
+\newcommand{\TechSecurityB}{\fpeval{\TechSecurityL + \TechSecurityS}}
+
+\newcommand{\TechSecurity}[3]{
+    \ifstrempty{#1}{}{\renewcommand{\TechSecurityL}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\TechSecurityS}{#2}}
+    \ifstrempty{#3}{\renewcommand{\TechSecurityB}{\fpeval{\TechSecurityL + \TechSecurityS}}}{\renewcommand{\TechSecurityB}{#3}}
+}
+
+\newcommand{\FirstAidL}{2}
+\newcommand{\FirstAidS}{\TECHValue}
+\newcommand{\FirstAidB}{\fpeval{\FirstAidL + \FirstAidS}}
+
+\newcommand{\FirstAid}[3]{
+    \ifstrempty{#1}{}{\renewcommand{\FirstAidL}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\FirstAidS}{#2}}
+    \ifstrempty{#3}{\renewcommand{\FirstAidB}{\fpeval{\FirstAidL + \FirstAidS}}}{\renewcommand{\FirstAidB}{#3}}
+}
+
+\newcommand{\ForgeryL}{0}
+\newcommand{\ForgeryS}{\TECHValue}
+\newcommand{\ForgeryB}{\fpeval{\ForgeryL + \ForgeryS}}
+
+\newcommand{\Forgery}[3]{
+    \ifstrempty{#1}{}{\renewcommand{\ForgeryL}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\ForgeryS}{#2}}
+    \ifstrempty{#3}{\renewcommand{\ForgeryB}{\fpeval{\ForgeryL + \ForgeryS}}}{\renewcommand{\ForgeryB}{#3}}
+}
+
+\newcommand{\TechLandL}{0}
+\newcommand{\TechLandS}{\TECHValue}
+\newcommand{\TechLandB}{\fpeval{\TechLandL + \TechLandS}}
+
+\newcommand{\TechLand}[3]{
+    \ifstrempty{#1}{}{\renewcommand{\TechLandL}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\TechLandS}{#2}}
+    \ifstrempty{#3}{\renewcommand{\TechLandB}{\fpeval{\TechLandL + \TechLandS}}}{\renewcommand{\TechLandB}{#3}}
+}
+
+\newcommand{\PaintDrawSculptL}{0}
+\newcommand{\PaintDrawSculptS}{\TECHValue}
+\newcommand{\PaintDrawSculptB}{\fpeval{\PaintDrawSculptL + \PaintDrawSculptS}}
+
+\newcommand{\PaintDrawSculpt}[3]{
+    \ifstrempty{#1}{}{\renewcommand{\PaintDrawSculptL}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\PaintDrawSculptS}{#2}}
+    \ifstrempty{#3}{\renewcommand{\PaintDrawSculptB}{\fpeval{\PaintDrawSculptL + \PaintDrawSculptS}}}{\renewcommand{\PaintDrawSculptB}{#3}}
+}
+
+\newcommand{\ParamedicL}{0}
+\newcommand{\ParamedicS}{\TECHValue}
+\newcommand{\ParamedicB}{\fpeval{\ParamedicL + \ParamedicS}}
+
+\newcommand{\Paramedic}[3]{
+    \ifstrempty{#1}{}{\renewcommand{\ParamedicL}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\ParamedicS}{#2}}
+    \ifstrempty{#3}{\renewcommand{\ParamedicB}{\fpeval{\ParamedicL + \ParamedicS}}}{\renewcommand{\ParamedicB}{#3}}
+}
+
+\newcommand{\PhotographyFilmL}{0}
+\newcommand{\PhotographyFilmS}{\TECHValue}
+\newcommand{\PhotographyFilmB}{\fpeval{\PhotographyFilmL + \PhotographyFilmS}}
+
+\newcommand{\PhotographyFilm}[3]{
+    \ifstrempty{#1}{}{\renewcommand{\PhotographyFilmL}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\PhotographyFilmS}{#2}}
+    \ifstrempty{#3}{\renewcommand{\PhotographyFilmB}{\fpeval{\PhotographyFilmL + \PhotographyFilmS}}}{\renewcommand{\PhotographyFilmB}{#3}}
+}
+
+\newcommand{\PickLockL}{0}
+\newcommand{\PickLockS}{\TECHValue}
+\newcommand{\PickLockB}{\fpeval{\PickLockL + \PickLockS}}
+
+\newcommand{\PickLock}[3]{
+    \ifstrempty{#1}{}{\renewcommand{\PickLockL}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\PickLockS}{#2}}
+    \ifstrempty{#3}{\renewcommand{\PickLockB}{\fpeval{\PickLockL + \PickLockS}}}{\renewcommand{\PickLockB}{#3}}
+}
+
+\newcommand{\PickPocketL}{0}
+\newcommand{\PickPocketS}{\TECHValue}
+\newcommand{\PickPocketB}{\fpeval{\PickPocketL + \PickPocketS}}
+
+\newcommand{\PickPocket}[3]{
+    \ifstrempty{#1}{}{\renewcommand{\PickPocketL}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\PickPocketS}{#2}}
+    \ifstrempty{#3}{\renewcommand{\PickPocketB}{\fpeval{\PickPocketL + \PickPocketS}}}{\renewcommand{\PickPocketB}{#3}}
+}
+
+\newcommand{\TechSeaL}{0}
+\newcommand{\TechSeaS}{\TECHValue}
+\newcommand{\TechSeaB}{\fpeval{\TechSeaL + \TechSeaS}}
+
+\newcommand{\TechSea}[3]{
+    \ifstrempty{#1}{}{\renewcommand{\TechSeaL}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\TechSeaS}{#2}}
+    \ifstrempty{#3}{\renewcommand{\TechSeaB}{\fpeval{\TechSeaL + \TechSeaS}}}{\renewcommand{\TechSeaB}{#3}}
+}
+
+\newcommand{\TechWeaponsL}{0}
+\newcommand{\TechWeaponsS}{\TECHValue}
+\newcommand{\TechWeaponsB}{\fpeval{\TechWeaponsL + \TechWeaponsS}}
+
+\newcommand{\TechWeapons}[3]{
+    \ifstrempty{#1}{}{\renewcommand{\TechWeaponsL}{#1}}
+    \ifstrempty{#2}{}{\renewcommand{\TechWeaponsS}{#2}}
+    \ifstrempty{#3}{\renewcommand{\TechWeaponsB}{\fpeval{\TechWeaponsL + \TechWeaponsS}}}{\renewcommand{\TechWeaponsB}{#3}}
+}
