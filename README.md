@@ -46,4 +46,4 @@ The basic code structure and several concepts were adapted from matsavages [DnD 
 
 ## Feedback & Bugs
 I appreciate any feedback and bug reports on this project.
-Please open an issue on github, describing the issue and adding code snippets, screenshots (if needed) and information about your compiler
+Please open an issue on github, describing the bug and adding code snippets, screenshots (if needed) and information about your compiler
