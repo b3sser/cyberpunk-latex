@@ -29,7 +29,7 @@ When working with auto-calculation, you can overwrite selected values with your 
 - Each stat has a custom command, listed and sorted in the empty sheet. The names of the commands should tell you, what Stat goes in there. If there are options, multiple arguments or other things special to a command, they will be explained in a comment right above it.
 
 - Multiline-fields have automatic line-wrap, for others use ```\\``` where needed
-- All fields have a default font size. You can change for selected fields by adding a size command before your actual input.
+- All fields have a default font size to fit with a normal amount of input. You can change the size for selected fields by adding a size command before your actual input.
     - Sizes: ```\Huge```, ```\huge```, ```\LARGE```, ```\Large```, ```\large```, ```\normalsize```, ```\small```, ```\footnotsize```, ```\scriptsize```, ```\tiny```
 
 ## Compilation & Dependencies
