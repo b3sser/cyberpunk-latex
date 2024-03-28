@@ -90,6 +90,23 @@
   }
 }
 
+
+% % %  GEAR  % % %
+\newcommand\GearTable{}
+
+\makeatletter
+\newcommand\AddGear[2]{%
+  \g@addto@macro\GearTable{\footnotesize #1 & \footnotesize #2 \\}
+}
+\makeatother
+
+\newcommand{\AmmunitionValue}{}
+\newcommand{\Ammunition}[1]{\renewcommand{\AmmunitionValue}{#1}}
+
+\newcommand{\CashValue}{}
+\newcommand{\Cash}[1]{\renewcommand{\CashValue}{#1}}
+
+
 % % %  BOTTOM RIGHT  % % %
 \newcommand{\FashionValue}{}
 \newcommand{\Fashion}[1]{\renewcommand{\FashionValue}{#1}}
