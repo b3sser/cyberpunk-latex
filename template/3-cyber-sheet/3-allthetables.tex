@@ -1,0 +1,110 @@
+\renewcommand{\arraystretch}{1.42}
+
+% PLACEMENT IS TODO
+% DON'T FORGET: X UND TABELLE HABEN GETRENNTE PLACEMENTS
+
+\ifbool{AudioX}
+    {\rput[c](300,540){\textbf{X}}
+     \rput[lt](213.5,537){
+        \parbox{192.5pt}{
+            \justify
+            \begin{tabular}{p{90pt}p{90.5pt}}
+                \AudioTable
+            \end{tabular}
+        }
+     }
+    }
+    {}
+
+    \ifbool{REyeX}
+    {\rput[c](200,480){\textbf{X}}
+     \rput[lt](213.5,537){
+        \parbox{192.5pt}{
+            \justify
+            \begin{tabular}{p{90pt}p{90.5pt}}
+                \REyeTable
+            \end{tabular}
+        }
+     }
+    }
+    {}
+
+    \ifbool{LEyeX}
+    {\rput[c](400,480){\textbf{X}}
+     \rput[lt](213.5,537){
+        \parbox{192.5pt}{
+            \justify
+            \begin{tabular}{p{90pt}p{90.5pt}}
+                \LEyeTable
+            \end{tabular}
+        }
+     }
+    }
+    {}
+
+    \ifbool{RArmX}
+    {\rput[c](200,400){\textbf{X}}
+     \rput[lt](213.5,537){
+        \parbox{192.5pt}{
+            \justify
+            \begin{tabular}{p{90pt}p{90.5pt}}
+                \RArmTable
+            \end{tabular}
+        }
+     }
+    }
+    {}
+
+    \ifbool{LArmX}
+    {\rput[c](400,400){\textbf{X}}
+     \rput[lt](213.5,537){
+        \parbox{192.5pt}{
+            \justify
+            \begin{tabular}{p{90pt}p{90.5pt}}
+                \LArmTable
+            \end{tabular}
+        }
+     }
+    }
+    {}
+
+    \ifbool{RLegX}
+    {\rput[c](200,100){\textbf{X}}
+     \rput[lt](213.5,537){
+        \parbox{192.5pt}{
+            \justify
+            \begin{tabular}{p{90pt}p{90.5pt}}
+                \RLegTable
+            \end{tabular}
+        }
+     }
+    }
+    {}
+
+    \ifbool{LLegX}
+    {\rput[c](400,100){\textbf{X}}
+     \rput[lt](213.5,537){
+        \parbox{192.5pt}{
+            \justify
+            \begin{tabular}{p{90pt}p{90.5pt}}
+                \LLegTable
+            \end{tabular}
+        }
+     }
+    }
+    {}
+
+    \ifbool{NeuralX}
+    {\rput[c](300,200){\textbf{X}}
+     \rput[lt](213.5,537){
+        \parbox{192.5pt}{
+            \justify
+            \begin{tabular}{p{90pt}p{90.5pt}}
+                \NeuralTable
+            \end{tabular}
+        }
+     }
+    }
+    {}
+
+\renewcommand{\arraystretch}{1} % Reset to default value 1

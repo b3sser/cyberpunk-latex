@@ -1,0 +1,135 @@
+\newbool{AudioX}
+\newcommand{\CyberaudioSuite}[1]{
+    \ifstrempty{#1}
+        {}
+        {\booltrue{AudioX}}
+}
+
+\newcommand{\AudioTable}{}
+
+\makeatletter
+\newcommand\AddAudio[2]{%
+  \g@addto@macro\AudioTable{\footnotesize #1 & \footnotesize #2 \\}
+}
+\makeatother
+
+% % % %
+
+\newbool{REyeX}
+\newcommand{\RightCyberEye}[1]{
+    \ifstrempty{#1}
+        {}
+        {\booltrue{REyeX}}
+}
+
+\newcommand{\REyeTable}{}
+
+\makeatletter
+\newcommand\AddREye[2]{%
+  \g@addto@macro\REyeTable{\footnotesize #1 & \footnotesize #2 \\}
+}
+\makeatother
+
+% % % %
+
+\newbool{LEyeX}
+\newcommand{\LeftCyberEye}[1]{
+    \ifstrempty{#1}
+        {}
+        {\booltrue{LEyeX}}
+}
+
+\newcommand{\LEyeTable}{}
+
+\makeatletter
+\newcommand\AddLEye[2]{%
+  \g@addto@macro\LEyeTable{\footnotesize #1 & \footnotesize #2 \\}
+}
+\makeatother
+
+% % % %
+
+\newbool{RArmX}
+\newcommand{\RightCyberArm}[1]{
+    \ifstrempty{#1}
+        {}
+        {\booltrue{RArmX}}
+}
+
+\newcommand{\RArmTable}{}
+
+\makeatletter
+\newcommand\AddRArm[2]{%
+  \g@addto@macro\RArmTable{\footnotesize #1 & \footnotesize #2 \\}
+}
+\makeatother
+
+% % % %
+
+\newbool{LArmX}
+\newcommand{\LeftCyberArm}[1]{
+    \ifstrempty{#1}
+        {}
+        {\booltrue{LArmX}}
+}
+
+\newcommand{\LArmTable}{}
+
+\makeatletter
+\newcommand\AddLArm[2]{%
+  \g@addto@macro\LArmTable{\footnotesize #1 & \footnotesize #2 \\}
+}
+\makeatother
+
+% % % %
+
+\newbool{RLegX}
+\newcommand{\RightCyberLeg}[1]{
+    \ifstrempty{#1}
+        {}
+        {\booltrue{RLegX}}
+}
+
+\newcommand{\RLegTable}{}
+
+\makeatletter
+\newcommand\AddRLeg[2]{%
+  \g@addto@macro\RLegTable{\footnotesize #1 & \footnotesize #2 \\}
+}
+\makeatother
+
+% % % %
+
+\newbool{LLegX}
+\newcommand{\LeftCyberLeg}[1]{
+    \ifstrempty{#1}
+        {}
+        {\booltrue{LLegX}}
+}
+
+\newcommand{\LLegTable}{}
+
+\makeatletter
+\newcommand\AddLLeg[2]{%
+  \g@addto@macro\LLegTable{\footnotesize #1 & \footnotesize #2 \\}
+}
+\makeatother
+
+% % % %
+
+\newbool{NeuralX}
+\newcommand{\NeuralLink}[1]{
+    \ifstrempty{#1}
+        {}
+        {\booltrue{NeuralX}}
+}
+
+\newcommand{\NeuralTable}{}
+
+\makeatletter
+\newcommand\AddNeural[2]{%
+  \g@addto@macro\NeuralTable{\footnotesize #1 & \footnotesize #2 \\}
+}
+\makeatother
+
+% % % %
