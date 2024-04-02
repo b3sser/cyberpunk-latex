@@ -133,3 +133,43 @@
 \makeatother
 
 % % % %
+
+\newcommand{\InternalTable}{}
+
+\makeatletter
+\newcommand\AddInternal[2]{%
+  \g@addto@macro\InternalTable{\footnotesize #1 & \footnotesize #2 \\}
+}
+\makeatother
+
+% % % %
+
+\newcommand{\ExternalTable}{}
+
+\makeatletter
+\newcommand\AddExternal[2]{%
+  \g@addto@macro\ExternalTable{\footnotesize #1 & \footnotesize #2 \\}
+}
+\makeatother
+
+% % % %
+
+\newcommand{\FashionTable}{}
+
+\makeatletter
+\newcommand\AddFashion[2]{%
+  \g@addto@macro\FashionTable{\footnotesize #1 & \footnotesize #2 \\}
+}
+\makeatother
+
+% % % %
+
+\newcommand{\BorgTable}{}
+
+\makeatletter
+\newcommand\AddBorg[2]{%
+  \g@addto@macro\BorgTable{\footnotesize #1 & \footnotesize #2 \\}
+}
+\makeatother
+
+% % % %
