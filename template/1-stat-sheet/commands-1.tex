@@ -28,18 +28,19 @@
 \newcommand{\EMPnowValue}{0}
 \newcommand{\EMPmaxValue}{2}
 
-\newcommand{\INT}[1]{\renewcommand{\INTValue}{#1}}
-\newcommand{\REF}[1]{\renewcommand{\REFValue}{#1}}
-\newcommand{\DEX}[1]{\renewcommand{\DEXValue}{#1}}
-\newcommand{\TECH}[1]{\renewcommand{\TECHValue}{#1}}
-\newcommand{\COOL}[1]{\renewcommand{\COOLValue}{#1}}
-\newcommand{\WILL}[1]{\renewcommand{\WILLValue}{#1}}
-\newcommand{\LUCK}[2]{\renewcommand{\LUCKnowValue}{#1}
-                    \renewcommand{\LUCKmaxValue}{#2}}
-\newcommand{\MOVE}[1]{\renewcommand{\MOVEValue}{#1}}
-\newcommand{\BODY}[1]{\renewcommand{\BODYValue}{#1}}
-\newcommand{\EMP}[2]{\renewcommand{\EMPnowValue}{#1}
-                    \renewcommand{\EMPmaxValue}{#2}}
+\newcommand{\INT}[1]{\ifstrempty{#1}{}{
+    \renewcommand{\INTValue}{#1}}}
+\newcommand{\REF}[1]{\ifstrempty{#1}{}{\renewcommand{\REFValue}{#1}}}
+\newcommand{\DEX}[1]{\ifstrempty{#1}{}{\renewcommand{\DEXValue}{#1}}}
+\newcommand{\TECH}[1]{\ifstrempty{#1}{}{\renewcommand{\TECHValue}{#1}}}
+\newcommand{\COOL}[1]{\ifstrempty{#1}{}{\renewcommand{\COOLValue}{#1}}}
+\newcommand{\WILL}[1]{\ifstrempty{#1}{}{\renewcommand{\WILLValue}{#1}}}
+\newcommand{\LUCK}[2]{\ifstrempty{#1}{}{\renewcommand{\LUCKnowValue}{#1}}
+                    \ifstrempty{#2}{}{\renewcommand{\LUCKmaxValue}{#2}}}
+\newcommand{\MOVE}[1]{\ifstrempty{#1}{}{\renewcommand{\MOVEValue}{#1}}}
+\newcommand{\BODY}[1]{\ifstrempty{#1}{}{\renewcommand{\BODYValue}{#1}}}
+\newcommand{\EMP}[2]{\ifstrempty{#1}{}{\renewcommand{\EMPnowValue}{#1}}
+                    \ifstrempty{#2}{}{\renewcommand{\EMPmaxValue}{#2}}}
 
 
 % % %  HEALTH  % % %
