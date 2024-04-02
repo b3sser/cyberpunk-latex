@@ -5,31 +5,25 @@
 % Helps prevent option clash with other packages that include xcolor
 \PassOptionsToPackage {table} {xcolor}
 
-%\RequirePackage {array}
-%\RequirePackage {colortbl}
-\RequirePackage {enumitem}
-%\RequirePackage {etoolbox}
 %\RequirePackage {textcomp,gensymb} % degree symbol for italian ordinals
-%\RequirePackage {hang} % hanging paragraphs
-%\RequirePackage [autolanguage] {numprint} % localization of thousands separator
-%\RequirePackage {tabularx} % variable-width table columns
-%\RequirePackage [breakable,skins,xparse]{tcolorbox} % styled text boxes
-\RequirePackage {tikz} % drawing ornaments and lines
-\RequirePackage {xcolor}
-%\RequirePackage {xparse} % \NewDocumentCommand and expl3
+%\RequirePackage [autolanguage] {numprint}  % localization of thousands separator
+%\RequirePackage {xparse}   % \NewDocumentCommand and expl3
 
-\RequirePackage {microtype} % Improve ragged2e hyphenation and overfull boxes
-\RequirePackage {ragged2e}
-%\RequirePackage [newparttoc] {titlesec}  % Used to adjust (sub)section, part, and table of contents formatting
-
+\RequirePackage {tikz}      % For sheet backgrounds
 \RequirePackage {geometry}
 \RequirePackage {fontspec}
 
-\RequirePackage{pstricks}
-\RequirePackage{ifthen}
+\RequirePackage {enumitem}
+\RequirePackage {xcolor}
+\RequirePackage {microtype} % Improve ragged2e hyphenation and overfull boxes
+\RequirePackage {ragged2e}
 
+\RequirePackage{pstricks}
 \RequirePackage{tabularray}
 
-% For calculating stats
-\RequirePackage[nomessages]{fp}% http://ctan.org/pkg/fp
-\RequirePackage{etoolbox}
+\RequirePackage{ifthen}
+\RequirePackage{etoolbox}   % For ifstrempty and bools
+
+\RequirePackage[nomessages]{fp} % For stat calculation
+
+
