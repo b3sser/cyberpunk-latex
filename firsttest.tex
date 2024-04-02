@@ -26,19 +26,6 @@
 \Notes{Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.}
 
 
-% % %  HEALTH  % % %
-\HumanityNow{40}
-\HumanityMax{46}      % EMP * 10
-
-\HPnow{35}
-\HPmax{40}            % 10 + (5*[BODY and WILL averaged, rounding up])
-\SeriouslyWounded{20} % Half HPmax
-\DeathSave{4}         % = BODY
-
-\CritInjuries{Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eir}
-\Addictions{Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy}
-
-
 % % %  STATS  % % %
 \INT{8}
 \REF{7}
@@ -46,12 +33,27 @@
 \TECH{6}
 \COOL{8}
 \WILL{7}
-\LUCKnow{5}
-\LUCKmax{8}
+\LUCK{5}{8} % \LUCK{Current}{Max}
 \MOVE{5}
 \BODY{4}
-\EMPnow{6}
-\EMPmax{6}
+\EMP{6}{6}  % \EMP{Current}{Max}
+
+
+% % %  HEALTH  % % %
+% Auto-calculation is supported for: 
+% Humanity, HP, Seriously Wounded, Death Save
+% To enable auto-calculation, leave field blank
+
+\Humanity{40}{}         % \Humanity{Current}{Max}
+% Do not rely on auto-calculate for this one if you have Cyberware
+
+\HP{35}{}               % \HP{Current}{Max}
+\SeriouslyWounded{}
+\DeathSave{}
+
+\CritInjuries{Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eir}
+\Addictions{Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy}
+
 
 
 % % %  SKILLS  % % %

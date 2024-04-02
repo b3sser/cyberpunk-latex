@@ -14,26 +14,6 @@
 \newcommand{\Notes}[1]{\renewcommand{\NotesValue}{#1}}
 
 
-% % %  HEALTH  % % %
-\newcommand{\HumanityNowValue}{}
-\newcommand{\HumanityMaxValue}{}
-\newcommand{\HPnowValue}{}
-\newcommand{\HPmaxValue}{}
-\newcommand{\SeriouslyWoundedValue}{}
-\newcommand{\DeathSaveValue}{}
-\newcommand{\CritInjuriesValue}{}
-\newcommand{\AddictionsValue}{}
-
-\newcommand{\HumanityNow}[1]{\renewcommand{\HumanityNowValue}{#1}}
-\newcommand{\HumanityMax}[1]{\renewcommand{\HumanityMaxValue}{#1}}
-\newcommand{\HPnow}[1]{\renewcommand{\HPnowValue}{#1}}
-\newcommand{\HPmax}[1]{\renewcommand{\HPmaxValue}{#1}}
-\newcommand{\SeriouslyWounded}[1]{\renewcommand{\SeriouslyWoundedValue}{#1}}
-\newcommand{\DeathSave}[1]{\renewcommand{\DeathSaveValue}{#1}}
-\newcommand{\CritInjuries}[1]{\renewcommand{\CritInjuriesValue}{#1}}
-\newcommand{\Addictions}[1]{\renewcommand{\AddictionsValue}{#1}}
-
-
 % % %  STATS  % % %
 \newcommand{\INTValue}{2}
 \newcommand{\REFValue}{2}
@@ -54,12 +34,32 @@
 \newcommand{\TECH}[1]{\renewcommand{\TECHValue}{#1}}
 \newcommand{\COOL}[1]{\renewcommand{\COOLValue}{#1}}
 \newcommand{\WILL}[1]{\renewcommand{\WILLValue}{#1}}
-\newcommand{\LUCKnow}[1]{\renewcommand{\LUCKnowValue}{#1}}
-\newcommand{\LUCKmax}[1]{\renewcommand{\LUCKmaxValue}{#1}}
+\newcommand{\LUCK}[2]{\renewcommand{\LUCKnowValue}{#1}
+                    \renewcommand{\LUCKmaxValue}{#2}}
 \newcommand{\MOVE}[1]{\renewcommand{\MOVEValue}{#1}}
 \newcommand{\BODY}[1]{\renewcommand{\BODYValue}{#1}}
-\newcommand{\EMPnow}[1]{\renewcommand{\EMPnowValue}{#1}}
-\newcommand{\EMPmax}[1]{\renewcommand{\EMPmaxValue}{#1}}
+\newcommand{\EMP}[2]{\renewcommand{\EMPnowValue}{#1}
+                    \renewcommand{\EMPmaxValue}{#2}}
+
+
+% % %  HEALTH  % % %
+\newcommand{\HumanityNowValue}{}
+\newcommand{\HumanityMaxValue}{\fpeval{\EMPnowValue *10}}    % EMP * 10
+\newcommand{\HPnowValue}{}
+\newcommand{\HPmaxValue}{\fpeval{10 + (5* ceil((\BODYValue + \WILLValue)/2))}}      % 10 + (5*[BODY and WILL averaged, rounding up])
+\newcommand{\SeriouslyWoundedValue}{\fpeval{\HPmaxValue /2}}   % Half HPmax
+\newcommand{\DeathSaveValue}{\BODYValue}    % = BODY
+\newcommand{\CritInjuriesValue}{}
+\newcommand{\AddictionsValue}{}
+
+\newcommand{\Humanity}[2]{\renewcommand{\HumanityNowValue}{#1}
+                        \ifstrempty{#2}{}{\renewcommand{\HumanityMaxValue}{#2}}}
+\newcommand{\HP}[2]{\renewcommand{\HPnowValue}{#1}
+                    \ifstrempty{#2}{}{\renewcommand{\HPmaxValue}{#2}}}
+\newcommand{\SeriouslyWounded}[1]{\ifstrempty{#1}{}{\renewcommand{\SeriouslyWoundedValue}{#1}}}
+\newcommand{\DeathSave}[1]{\ifstrempty{#1}{}{\renewcommand{\DeathSaveValue}{#1}}}
+\newcommand{\CritInjuries}[1]{\renewcommand{\CritInjuriesValue}{#1}}
+\newcommand{\Addictions}[1]{\renewcommand{\AddictionsValue}{#1}}
 
 
 % % %  ARMOR  % % %
@@ -92,6 +92,7 @@
     \renewcommand{\ShieldSP}{#2}
     \renewcommand{\ShieldPen}{#3}
 }
+
 
 % % %  WEAPONS  % % %
 \newcommand\WeaponsTable{}
