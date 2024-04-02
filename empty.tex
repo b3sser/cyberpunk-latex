@@ -1,0 +1,361 @@
+\documentclass[letterpaper,landscape,oneside]{letter}
+\usepackage{cypunk}
+
+% Set input language
+\usepackage[UKenglish]{babel}
+
+% % % % % % % % % % % % % % % % % % % % % % % %
+% %              HOW TO USE                 % %
+% % 1. Copy empty. tex                      % %
+% % 2. Fill commands with your values/text  % %
+% % 3. Compile with XeTeX                   % %
+% %                                         % %
+% % Please refer to README.MD for more      % %
+% % Also check out example-character.tex    % %
+% % % % % % % % % % % % % % % % % % % % % % % %
+
+
+% % %  BASIC INFO  % % %
+\CharacterPhoto{\includegraphics[height=129pt]{img/blank.png}}
+% if you don't have a picture YOU NEED TO put a % before that line or it will not compile
+% put your file path (e.g. img/myphoto) in {}
+% works best with aspect ratio 540 x 511
+
+\Handle{}
+\Role{}
+\RoleAbility{}
+\RoleRank{}
+\Notes{}
+
+
+% % %  STATS  % % %
+\INT{}
+\REF{}
+\DEX{}
+\TECH{}
+\COOL{}
+\WILL{}
+\LUCK{}{}   % \LUCK{Current}{Max}
+\MOVE{}
+\BODY{}
+\EMP{}{}    % \EMP{Current}{Max}
+
+
+% % %  HEALTH  % % %
+% Auto-calculation is supported for: 
+% Humanity, HP, Seriously Wounded, Death Save
+% To enable auto-calculation, leave field blank
+
+\Humanity{}{}         % \Humanity{Current}{Max}
+% Do not rely on auto-calculate for this one if you have Cyberware
+
+\HP{}{}               % \HP{Current}{Max}
+\SeriouslyWounded{}
+\DeathSave{}
+
+\CritInjuries{}
+\Addictions{}
+
+
+
+% % %  SKILLS  % % %
+% Use like this:
+% \SkillName{Lvl}{Stat}{Base}
+% Leave Lvl blank to set to minimum (0 normally, 2 for basic skills (bold))
+% Leave Stat blank to automatically copy from Stats
+% Leave Base blank to set as Lvl+Stat
+
+%  Awareness Skills  %
+\Concentration{}{}{}
+\ConcealReveal{}{}{}
+\LipReading{}{}{}
+\Perception{}{}{}
+\Tracking{}{}{}
+
+%  Body Skills  %
+\Athletics{}{}{}
+\Contortionist{}{}{}
+\Dance{}{}{}
+\Endurance{}{}{}
+\ResistTortureDrugs{}{}{}
+\Stealth{}{}{}
+
+%  Control Skills  %
+\DriveLand{}{}{}
+\PilotAir{}{}{}
+\PilotSea{}{}{}
+\Riding{}{}{}
+
+%  Education Skills  %
+\Accounting{}{}{}
+\AnimalHandling{}{}{}
+\Bureaucracy{}{}{}
+\Business{}{}{}
+\Composition{}{}{}
+\Criminology{}{}{}
+\Cryptography{}{}{}
+\Deduction{}{}{}
+\Education{}{}{}
+\Gamble{}{}{}
+
+
+% For Languages, Local Expert, Science, Instruments:
+% fill the 1st field with the name
+% and the other three as usual
+% Leave blank (or delete command) if you know none
+
+%  Languages  %
+\StreetSlang{}{}{}
+\LanguageA{}{}{}{}  % Should be filled with the language you get from cultural origin
+\LanguageB{}{}{}{}
+
+\LibrarySearch{}{}{}
+
+%  Local Expert  %
+\YourHome{}{}{}
+\LocalA{}{}{}{}
+\LocalB{}{}{}{}
+
+%  Science  %
+\ScienceA{}{}{}{}
+\ScienceB{}{}{}{}
+
+\Tactics{}{}{}
+\Wilderness{}{}{}
+
+
+%  Fighting Skills  %
+\Brawling{}{}{}
+\Evasion{}{}{}
+\MartialArts{}{}{}
+\MeleeWeapon{}{}{}
+
+
+%  Performance Skills  %
+\Acting{}{}{}
+%  Play Instrument  %
+\InstrumentA{}{}{}{}
+\InstrumentB{}{}{}{}
+
+
+%  Ranged Weapon Skills  %
+\Archery{}{}{}
+\Autofire{}{}{}
+\Handgun{}{}{}
+\HeavyWeapons{}{}{}
+\ShoulderArms{}{}{}
+
+%  Social Skills  %
+\Bribery{}{}{}
+\Conversation{}{}{}
+\HumanPerception{}{}{}
+\Interrogation{}{}{}
+\Persuasion{}{}{}
+\PersonalGrooming{}{}{}
+\StreetWise{}{}{}
+\Trading{}{}{}
+\Wardrobe{}{}{}
+
+%  Technique Skills  %
+\TechAir{}{}{}
+\TechBasic{}{}{}
+\TechCyber{}{}{}
+\Demolitions{}{}{}
+\TechSecurity{}{}{}
+\FirstAid{}{}{}
+\Forgery{}{}{}
+\TechLand{}{}{}
+\PaintDrawSculpt{}{}{}
+\Paramedic{}{}{}
+\PhotographyFilm{}{}{}
+\PickLock{}{}{}
+\PickPocket{}{}{}
+\TechSea{}{}{}
+\TechWeapons{}{}{}
+
+
+% % %  ARMOR & WEAPONS  % % %
+% \Armor{type/name}{SP}{Penalty}
+\HeadArmor{}{}{}
+\BodyArmor{}{}{}
+\Shield{}{}{}
+
+% Use like this:
+% \AddWeapon{Name}{DMG}{Ammo}{ROF}{Notes}
+% Table on sheet holds up to 6 entries, but you can add as many as you like. Page edge should be reached after 10 entries.
+
+\AddWeapon{}{}{}{}{}
+\AddWeapon{}{}{}{}{}
+\AddWeapon{}{}{}{}{}
+\AddWeapon{}{}{}{}{}
+\AddWeapon{}{}{}{}{}
+\AddWeapon{}{}{}{}{}
+
+
+
+% % % % % % % % % % % % % % % % % % % % % % % %
+% % % %             PAGE 2              % % % %
+% % % % % % % % % % % % % % % % % % % % % % % %
+
+% % %  TOP LEFT  % % %
+\Aliases{}
+\ImprovementPoints{}{}
+\Reputation{}
+% Only first line has automatic indent to make room for "Reputation".
+% Please manually add indent for "Events" with  \\ \hspace*{38pt}
+\RepEvents{}
+
+% % %  LIFEPATH  % % %
+\CulturalOrigins{}
+\Personality{}
+\ClothingStyle{}
+\Hairstyle{}
+\MostValued{}
+\AboutPeople{}
+\MostValuedPerson{}
+\MostValuedPosession{}
+\FamilyBackground{}
+\ChildhoodEnvironment{}
+\FamilyCrisis{}
+\LifeGoals{}
+
+%  Friends  %
+\FriendA{}
+\FriendB{}
+\FriendC{}
+
+%  Tragic Love Affairs  %
+\LoveA{}
+\LoveB{}
+\LoveC{}
+
+%  Enemies  %
+% \Enemy{Who}{WhatCausedIt}{WhatCanTheThrowAtYou}{WhatsGonnaHappen}
+\EnemyA{}{}{}{}
+\EnemyB{}{}{}{}
+\EnemyC{}{}{}{}
+
+% % %  BOTTOM RIGHT  % % % 
+\Fashion{}
+
+\Housing{}
+\Rent{}
+\Lifestyle{}
+
+\RoleSpecificLifepath{}
+
+
+% % %  GEAR  % % %
+% \AddGear{Name}{Notes}
+% Table on sheet holds up to 18 entries
+
+\AddGear{}{}
+\AddGear{}{}
+\AddGear{}{}
+\AddGear{}{}
+\AddGear{}{}
+\AddGear{}{}
+
+\Ammunition{}
+\Cash{}
+
+
+
+% % % % % % % % % % % % % % % % % % % % % % % %
+% % % %             PAGE 3              % % % %
+% % % % % % % % % % % % % % % % % % % % % % % %
+
+%  Usage  %
+% 1. Core module: No = leave empty, Yes = put literally any character(s)
+% 2. Use the Add-Commands with {Name}{Data}
+% Entries from 2. will NOT be shown, if you do not have the core module
+
+% LaTeX-wise, you can use the Add-Commands as many times as you like,
+% but keep in mind the game rules usually only allow a limited number
+
+\CyberaudioSuite{}
+\AddAudio{}{}
+\AddAudio{}{}
+\AddAudio{}{}
+
+\RightCyberEye{}
+\AddREye{}{}
+\AddREye{}{}
+\AddREye{}{}
+
+\LeftCyberEye{}
+\AddLEye{}{}
+\AddLEye{}{}
+\AddLEye{}{}
+
+\RightCyberArm{}
+\AddRArm{}{}
+\AddRArm{}{}
+\AddRArm{}{}
+\AddRArm{}{}
+
+\LeftCyberArm{}
+\AddLArm{}{}
+\AddLArm{}{}
+\AddLArm{}{}
+\AddLArm{}{}
+
+\RightCyberLeg{}
+\AddRLeg{}{}
+\AddRLeg{}{}
+\AddRLeg{}{}
+
+\LeftCyberLeg{}
+\AddLLeg{}{}
+\AddLLeg{}{}
+\AddLLeg{}{}
+
+\NeuralLink{}
+\AddNeural{}{}
+\AddNeural{}{}
+\AddNeural{}{}
+\AddNeural{}{}
+\AddNeural{}{}
+
+
+\AddInternal{}{}
+\AddInternal{}{}
+\AddInternal{}{}
+\AddInternal{}{}
+\AddInternal{}{}
+\AddInternal{}{}
+\AddInternal{}{}
+
+\AddExternal{}{}
+\AddExternal{}{}
+\AddExternal{}{}
+\AddExternal{}{}
+\AddExternal{}{}
+\AddExternal{}{}
+\AddExternal{}{}
+
+\AddFashion{}{}
+\AddFashion{}{}
+\AddFashion{}{}
+\AddFashion{}{}
+\AddFashion{}{}
+\AddFashion{}{}
+\AddFashion{}{}
+
+\AddBorg{}{}
+\AddBorg{}{}
+\AddBorg{}{}
+\AddBorg{}{}
+\AddBorg{}{}
+\AddBorg{}{}
+\AddBorg{}{}
+
+
+% % Please do not alter code below this line % %
+\begin{document}
+\renderstatsheet
+\newpage
+\renderlifesheet
+\newpage
+\rendercybersheet
+\end{document}

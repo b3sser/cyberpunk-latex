@@ -1,0 +1,223 @@
+\documentclass[letterpaper,landscape,oneside]{letter}
+\usepackage{cypunk}
+
+% Set input language
+\usepackage[UKenglish]{babel}
+
+% % % % % % % % % % % % % % % % % % % % % % % %
+% %              HOW TO USE                 % %
+% % 1. Copy empty. tex                      % %
+% % 2. Fill commands with your values/text  % %
+% % 3. Compile with XeTeX                   % %
+% %                                         % %
+% % Please refer to README.MD for more      % %
+% % Also check out example-character.tex    % %
+% % % % % % % % % % % % % % % % % % % % % % % %
+
+
+% % %  BASIC INFO  % % %
+\CharacterPhoto{\includegraphics[height=129pt]{img/blank}}
+% if you don't have a picture YOU NEED TO put a % before that line or it will not compile
+% put a file path (e.g. img/myphoto) in {}
+% works best with aspect ratio 540 x 511
+
+\Handle{Nova}
+\Role{Fixer}
+\RoleAbility{Operator}
+\RoleRank{4}
+\Notes{Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.}
+
+
+% % %  STATS  % % %
+\INT{8}
+\REF{7}
+\DEX{3}
+\TECH{6}
+\COOL{8}
+\WILL{7}
+\LUCK{5}{8} % \LUCK{Current}{Max}
+\MOVE{5}
+\BODY{4}
+\EMP{6}{6}  % \EMP{Current}{Max}
+
+
+% % %  HEALTH  % % %
+% Auto-calculation is supported for: 
+% Humanity, HP, Seriously Wounded, Death Save
+% To enable auto-calculation, leave field blank
+
+\Humanity{40}{46}         % \Humanity{Current}{Max}
+% Do not rely on auto-calculate for this one if you have Cyberware
+
+\HP{35}{}               % \HP{Current}{Max}
+\SeriouslyWounded{}
+\DeathSave{}
+
+\CritInjuries{Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eir}
+\Addictions{Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy}
+
+
+
+% % %  SKILLS  % % %
+% Use like this:
+% \SkillName{Lvl}{Stat}{Base}
+% Leave Lvl blank to set to minimum (0 normally, 2 for basic skills (bold))
+% Leave Stat blank to automatically copy from Stats
+% Leave Base blank to set as Lvl+Stat
+% If you're gonna leave all three blank, you can even just remove the command, will still work
+
+%  Awareness Skills  %
+\ConcealReveal{2}{}{}
+
+%  Body Skills  %
+\ResistTortureDrugs{4}{}{}
+
+%  Control Skills  %
+% none
+
+%  Education Skills  %
+\Accounting{3}{}{}
+\Business{6}{}{}
+\Education{4}{}{}
+\Gamble{2}{}{}
+
+
+% For Languages, Local Expert, Science, Instruments:
+% fill the 1st field with the name
+% and the other three as usual
+% Leave blank (or delete command) if you know none
+
+%  Languages  %
+\LanguageA{Hawaiian}{}{}{}  % Should be filled with the language you get from cultural origin
+\LanguageB{Japanese}{4}{}{}
+
+
+%  Fighting Skills  %
+
+%  Performance Skills  %
+
+%  Ranged Weapon Skills  %
+\ShoulderArms{6}{}{}
+
+%  Social Skills  %
+\Bribery{4}{}{}
+\Conversation{5}{}{}
+\HumanPerception{3}{}{11}
+\Interrogation{4}{}{14}
+\Persuasion{5}{}{}
+\PersonalGrooming{3}{}{}
+\StreetWise{6}{}{}
+\Trading{5}{}{}
+\Wardrobe{4}{}{}
+
+%  Technique Skills  %
+\TechLand{2}{}{}
+
+
+% % %  ARMOR & WEAPONS  % % %
+% \Armor{type/name}{SP}{Penalty}
+\HeadArmor{Kevlar}{7}{--}
+\BodyArmor{Medium Armorjack}{11}{--}
+
+
+% Use like this:
+% \AddWeapon{Name}{DMG}{Ammo}{ROF}{Notes}
+% Table on sheet holds up to 6 entries, but you can add as many as you like. Page edge should be reached after 10 entries.
+
+\AddWeapon{Tomahawk (Light Melee)}{1d6}{--}{2}{can be concealed}
+\AddWeapon{Assault Rifle}{5d6}{25 rifle}{1}{\tiny 2 hands, Autofire (4), Suppressive Fire}
+\AddWeapon{Sniper Rifle}{5d6}{4 rifle}{1}{two hands}
+
+
+
+% % % % % % % % % % % % % % % % % % % % % % % %
+% % % %             PAGE 2              % % % %
+% % % % % % % % % % % % % % % % % % % % % % % %
+
+% % %  TOP LEFT  % % %
+\Aliases{Crystal V}
+\ImprovementPoints{40}{50}
+\Reputation{2}
+% Only first line has automatic indent to make room for "Reputation".
+% Please manually add indent for "Events" with  \\ \hspace*{38pt}
+\RepEvents{Lorem ipsum dolor sit amet, con\\ \hspace*{40.7pt} setetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam.}
+
+% % %  LIFEPATH  % % %
+\CulturalOrigins{Lorem ipsum dolor sit amet, con setetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore}
+\Personality{Lorem ipsum dolor sit amet, con setetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore}
+\ClothingStyle{Lorem ipsum dolor sit amet, con setetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore}
+\Hairstyle{Lorem ipsum dolor sit amet, con setetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore}
+\MostValued{Lorem ipsum dolor sit amet, con setetur sadipscing elitr, sed diam}
+\AboutPeople{Lorem ipsum dolor sit amet, con setetur sadipscing elitr, sed diam}
+\MostValuedPerson{Lorem ipsum dolor sit amet, con setetur sadipscing elitr, sed diam nonumy eirmod}
+\MostValuedPosession{Lorem ipsum dolor sit amet, con setetur sadipscing elitr, sed diam nonumy eirmod}
+\FamilyBackground{Lorem ipsum dolor sit amet, con setetur sadipscing elitr, sed diam nonumy eirmod}
+\ChildhoodEnvironment{Lorem ipsum dolor sit amet, con setetur sadipscing elitr, sed diam nonumy eirmod}
+\FamilyCrisis{Lorem ipsum dolor sit amet, con setetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore}
+\LifeGoals{Lorem ipsum dolor sit amet, con setetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore}
+
+%  Friends  %
+\FriendA{Water}
+\FriendB{Oxygen}
+\FriendC{Vidyo Gaymeh}
+
+%  Tragic Love Affairs  %
+\LoveA{Sleep}
+\LoveB{Memes}
+
+%  Enemies  %
+% \Enemy{Who}{WhatCausedIt}{WhatCanTheThrowAtYou}{WhatsGonnaHappen}
+\EnemyA{Cheater}{Ranked Match}{Bots}{I'll report them}
+
+% % %  BOTTOM RIGHT  % % % 
+\Fashion{Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.}
+
+\Housing{Cargo Container}
+\Rent{1000 eb}
+\Lifestyle{Kibble -- 100 eb}
+
+\RoleSpecificLifepath{Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et}
+
+
+% % %  GEAR  % % %
+% \AddGear{Name}{Notes}
+% Table on sheet holds up to 18 entries
+
+\AddGear{Flashlight}{100 m/yd beam of light, lasts 10 hours on a charge}
+
+\Ammunition{60x Basic Rifle Ammo}
+\Cash{30 eb}
+
+
+
+% % % % % % % % % % % % % % % % % % % % % % % %
+% % % %             PAGE 3              % % % %
+% % % % % % % % % % % % % % % % % % % % % % % %
+
+%  Usage  %
+% 1. Core module: No = leave empty, Yes = put literally any character(s)
+% 2. Use the Add-Commands with {Name}{Data}
+% Entries from 2. will NOT be shown, if you do not have the core module
+
+% LaTeX-wise, you can use the Add-Commands as many times as you like,
+% but keep in mind the game rules usually only allow a limited number
+
+\CyberaudioSuite{yes}
+\AddAudio{Bug Detector}{2m radius, beeps on bug}
+\AddAudio{Voice Stress Analyzer}{\tiny +2 Human Percept \& Interrogate}
+
+\AddInternal{Contraceptive Implant}{Prevents pregnancy}
+\AddInternal{Nasal Filters}{\tiny immune to toxic gas, fumes, etc.}
+
+\AddFashion{Biomonitor}{reads my vitals}
+\AddFashion{Light Tattoo}{on collar bones}
+
+
+% % Please do not alter code below this line % %
+\begin{document}
+\renderstatsheet
+\newpage
+\renderlifesheet
+\newpage
+\rendercybersheet
+\end{document}
