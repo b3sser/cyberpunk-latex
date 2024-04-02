@@ -3,13 +3,11 @@ LaTeX template for typesetting Cyberpunk Character Sheets
 
 ## Features
 - 3-page Character Sheet
-- Automatic calculation of Stat & Base (for Skills)
+- Automatic calculation of Stat & Base (for Skills) and for Derived Stats (e.g. Death Save)
 - Player input via custom commands for a clean and compact tex file
-- Automatic text wrap
 - Example character to illustrate usage
 
 #### Currently in development:
-- Auto-calculation for Derived Stats (e.g. Death Save)
 - Mooks Sheets
 
 ## Usage
