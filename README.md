@@ -8,6 +8,7 @@ LaTeX template for typesetting Cyberpunk Character Sheets
 - Example character to illustrate usage
 
 #### Currently in development:
+- Background as svg or via tikz to make resulting pdfs much more lightweight and load faster
 - Mooks Sheets
 
 ## Usage
